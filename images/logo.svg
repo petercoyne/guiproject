@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.154419799" offset="73.1075802%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.377786276" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-160.000000, -119.000000)">
+            <g id="Group-8" transform="translate(160.000000, 119.000000)">
+                <g id="Group-7">
+                    <circle id="Oval" stroke="#56A7D0" stroke-width="2" fill="url(#radialGradient-1)" cx="23.5" cy="23.5" r="22.5"></circle>
+                    <text id="S" font-family="KarnivoreLite, Karnivore Lite" font-size="26" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="13" y="32">S</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
