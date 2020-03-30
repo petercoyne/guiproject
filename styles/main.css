@@ -21,9 +21,9 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #36587D;
+  --primary: #1F446D;
   --secondary: #6c757d;
-  --success: #56A7D0;
+  --success: #3E82CE;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
@@ -154,12 +154,12 @@ sup {
 
 /* line 186, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_reboot.scss */
 a {
-  color: #36587D;
+  color: #1F446D;
   text-decoration: none;
   background-color: transparent; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   a:hover {
-    color: #1f3248;
+    color: #0e1f31;
     text-decoration: underline; }
 
 /* line 202, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_reboot.scss */
@@ -1537,22 +1537,22 @@ pre {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #c7d0db; }
+  background-color: #c0cbd6; }
 
 /* line 14, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #96a8bb; }
+  border-color: #8b9eb3; }
 
 /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 .table-hover .table-primary:hover {
-  background-color: #b7c3d1; }
+  background-color: #b1becc; }
   /* line 32, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
   .table-hover .table-primary:hover > td,
   .table-hover .table-primary:hover > th {
-    background-color: #b7c3d1; }
+    background-color: #b1becc; }
 
 /* line 7, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-secondary,
@@ -1579,22 +1579,22 @@ pre {
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #d0e6f2; }
+  background-color: #c9dcf1; }
 
 /* line 14, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-success th,
 .table-success td,
 .table-success thead th,
 .table-success tbody + tbody {
-  border-color: #a7d1e7; }
+  border-color: #9bbee6; }
 
 /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 .table-hover .table-success:hover {
-  background-color: #bcdbec; }
+  background-color: #b5cfec; }
   /* line 32, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
   .table-hover .table-success:hover > td,
   .table-hover .table-success:hover > th {
-    background-color: #bcdbec; }
+    background-color: #b5cfec; }
 
 /* line 7, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-info,
@@ -1832,9 +1832,9 @@ pre {
   .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #7198c2;
+    border-color: #4282c9;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
   /* line 43, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_forms.scss */
   .form-control::placeholder {
     color: #6c757d;
@@ -1978,7 +1978,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #56A7D0; }
+  color: #3E82CE; }
 
 /* line 52, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .valid-tooltip {
@@ -1992,7 +1992,7 @@ textarea.form-control {
   font-size: 0.875rem;
   line-height: 1.5;
   color: #fff;
-  background-color: rgba(86, 167, 208, 0.9);
+  background-color: rgba(62, 130, 206, 0.9);
   border-radius: 0.25rem; }
 
 /* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -2005,17 +2005,17 @@ textarea.form-control {
 /* line 33, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .form-control .was-validated :valid,
 .form-control .is-valid {
-  border-color: #56A7D0;
+  border-color: #3E82CE;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2356A7D0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%233E82CE' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
   /* line 85, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
   .form-control .was-validated :valid:focus,
   .form-control .is-valid:focus {
-    border-color: #56A7D0;
-    box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.25); }
+    border-color: #3E82CE;
+    box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.25); }
 
 /* line 33, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 textarea.form-control .was-validated :valid,
@@ -2026,19 +2026,19 @@ textarea.form-control .is-valid {
 /* line 33, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-select .was-validated :valid,
 .custom-select .is-valid {
-  border-color: #56A7D0;
+  border-color: #3E82CE;
   padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2356A7D0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%233E82CE' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
   /* line 111, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
   .custom-select .was-validated :valid:focus,
   .custom-select .is-valid:focus {
-    border-color: #56A7D0;
-    box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.25); }
+    border-color: #3E82CE;
+    box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.25); }
 
 /* line 120, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .form-check-input .was-validated :valid ~ .form-check-label,
 .form-check-input .is-valid ~ .form-check-label {
-  color: #56A7D0; }
+  color: #3E82CE; }
 
 /* line 124, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .form-check-input .was-validated :valid ~ .valid-feedback,
@@ -2050,38 +2050,38 @@ textarea.form-control .is-valid {
 /* line 132, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-control-input .was-validated :valid ~ .custom-control-label,
 .custom-control-input .is-valid ~ .custom-control-label {
-  color: #56A7D0; }
+  color: #3E82CE; }
   /* line 135, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
   .custom-control-input .was-validated :valid ~ .custom-control-label::before,
   .custom-control-input .is-valid ~ .custom-control-label::before {
-    border-color: #56A7D0; }
+    border-color: #3E82CE; }
 
 /* line 141, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-control-input .was-validated :valid:checked ~ .custom-control-label::before,
 .custom-control-input .is-valid:checked ~ .custom-control-label::before {
-  border-color: #7ebcdb;
-  background-color: #7ebcdb; }
+  border-color: #679cd8;
+  background-color: #679cd8; }
 
 /* line 148, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-control-input .was-validated :valid:focus ~ .custom-control-label::before,
 .custom-control-input .is-valid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.25); }
+  box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.25); }
 
 /* line 152, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-control-input .was-validated :valid:focus:not(:checked) ~ .custom-control-label::before,
 .custom-control-input .is-valid:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #56A7D0; }
+  border-color: #3E82CE; }
 
 /* line 162, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-file-input .was-validated :valid ~ .custom-file-label,
 .custom-file-input .is-valid ~ .custom-file-label {
-  border-color: #56A7D0; }
+  border-color: #3E82CE; }
 
 /* line 167, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .custom-file-input .was-validated :valid:focus ~ .custom-file-label,
 .custom-file-input .is-valid:focus ~ .custom-file-label {
-  border-color: #56A7D0;
-  box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.25); }
+  border-color: #3E82CE;
+  box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.25); }
 
 /* line 44, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_forms.scss */
 .invalid-feedback {
@@ -2277,7 +2277,7 @@ textarea.form-control .is-invalid {
   /* line 27, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
   .btn:focus, .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
   /* line 34, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
   .btn.disabled, .btn:disabled {
     opacity: 0.65; }
@@ -2290,34 +2290,34 @@ fieldset:disabled a.btn {
 /* line 62, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-primary {
   color: #fff;
-  background-color: #36587D;
-  border-color: #36587D; }
+  background-color: #1F446D;
+  border-color: #1F446D; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-primary:hover {
     color: #fff;
-    background-color: #2a4562;
-    border-color: #273f59; }
+    background-color: #17314f;
+    border-color: #142b45; }
   /* line 18, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #2a4562;
-    border-color: #273f59;
-    box-shadow: 0 0 0 0.2rem rgba(84, 113, 145, 0.5); }
+    background-color: #17314f;
+    border-color: #142b45;
+    box-shadow: 0 0 0 0.2rem rgba(65, 96, 131, 0.5); }
   /* line 32, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #36587D;
-    border-color: #36587D; }
+    background-color: #1F446D;
+    border-color: #1F446D; }
   /* line 43, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #273f59;
-    border-color: #233950; }
+    background-color: #142b45;
+    border-color: #11253b; }
     /* line 53, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(84, 113, 145, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(65, 96, 131, 0.5); }
 
 /* line 62, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-secondary {
@@ -2354,34 +2354,34 @@ fieldset:disabled a.btn {
 /* line 62, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-success {
   color: #fff;
-  background-color: #56A7D0;
-  border-color: #56A7D0; }
+  background-color: #3E82CE;
+  border-color: #3E82CE; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-success:hover {
     color: #fff;
-    background-color: #3897c8;
-    border-color: #3590be; }
+    background-color: #2f6fb7;
+    border-color: #2c69ad; }
   /* line 18, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-success:focus, .btn-success.focus {
     color: #fff;
-    background-color: #3897c8;
-    border-color: #3590be;
-    box-shadow: 0 0 0 0.2rem rgba(111, 180, 215, 0.5); }
+    background-color: #2f6fb7;
+    border-color: #2c69ad;
+    box-shadow: 0 0 0 0.2rem rgba(91, 149, 213, 0.5); }
   /* line 32, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-success.disabled, .btn-success:disabled {
     color: #fff;
-    background-color: #56A7D0;
-    border-color: #56A7D0; }
+    background-color: #3E82CE;
+    border-color: #3E82CE; }
   /* line 43, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
   .show > .btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #3590be;
-    border-color: #3288b4; }
+    background-color: #2c69ad;
+    border-color: #2963a3; }
     /* line 53, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
     .show > .btn-success.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(111, 180, 215, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(91, 149, 213, 0.5); }
 
 /* line 62, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-info {
@@ -2545,30 +2545,30 @@ fieldset:disabled a.btn {
 
 /* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-primary {
-  color: #36587D;
-  border-color: #36587D; }
+  color: #1F446D;
+  border-color: #1F446D; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-outline-primary:hover {
     color: #fff;
-    background-color: #36587D;
-    border-color: #36587D; }
+    background-color: #1F446D;
+    border-color: #1F446D; }
   /* line 74, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-primary:focus, .btn-outline-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.5); }
   /* line 79, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-    color: #36587D;
+    color: #1F446D;
     background-color: transparent; }
   /* line 85, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
   .show > .btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #36587D;
-    border-color: #36587D; }
+    background-color: #1F446D;
+    border-color: #1F446D; }
     /* line 92, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.5); }
 
 /* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-secondary {
@@ -2599,30 +2599,30 @@ fieldset:disabled a.btn {
 
 /* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-success {
-  color: #56A7D0;
-  border-color: #56A7D0; }
+  color: #3E82CE;
+  border-color: #3E82CE; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-outline-success:hover {
     color: #fff;
-    background-color: #56A7D0;
-    border-color: #56A7D0; }
+    background-color: #3E82CE;
+    border-color: #3E82CE; }
   /* line 74, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-success:focus, .btn-outline-success.focus {
-    box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.5); }
   /* line 79, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-success.disabled, .btn-outline-success:disabled {
-    color: #56A7D0;
+    color: #3E82CE;
     background-color: transparent; }
   /* line 85, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
   .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
-    background-color: #56A7D0;
-    border-color: #56A7D0; }
+    background-color: #3E82CE;
+    border-color: #3E82CE; }
     /* line 92, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-success.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.5); }
 
 /* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-info {
@@ -2762,11 +2762,11 @@ fieldset:disabled a.btn {
 /* line 79, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
 .btn-link {
   font-weight: 400;
-  color: #36587D;
+  color: #1F446D;
   text-decoration: none; }
   /* line 13, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-link:hover {
-    color: #1f3248;
+    color: #0e1f31;
     text-decoration: underline; }
   /* line 89, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_buttons.scss */
   .btn-link:focus, .btn-link.focus {
@@ -3044,7 +3044,7 @@ input[type="button"].btn-block {
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #36587D; }
+    background-color: #1F446D; }
   /* line 160, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_dropdown.scss */
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
@@ -3374,19 +3374,19 @@ input[type="button"].btn-block {
   /* line 30, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
-    border-color: #36587D;
-    background-color: #36587D; }
+    border-color: #1F446D;
+    background-color: #1F446D; }
   /* line 37, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
   /* line 46, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #7198c2; }
+    border-color: #4282c9; }
   /* line 50, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     color: #fff;
-    background-color: #95b1d1;
-    border-color: #95b1d1; }
+    background-color: #6a9dd5;
+    border-color: #6a9dd5; }
   /* line 60, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
     color: #6c757d; }
@@ -3432,8 +3432,8 @@ input[type="button"].btn-block {
 
 /* line 126, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #36587D;
-  background-color: #36587D; }
+  border-color: #1F446D;
+  background-color: #1F446D; }
 
 /* line 131, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
@@ -3441,11 +3441,11 @@ input[type="button"].btn-block {
 
 /* line 137, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(54, 88, 125, 0.5); }
+  background-color: rgba(31, 68, 109, 0.5); }
 
 /* line 140, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(54, 88, 125, 0.5); }
+  background-color: rgba(31, 68, 109, 0.5); }
 
 /* line 151, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-radio .custom-control-label::before {
@@ -3457,7 +3457,7 @@ input[type="button"].btn-block {
 
 /* line 163, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(54, 88, 125, 0.5); }
+  background-color: rgba(31, 68, 109, 0.5); }
 
 /* line 174, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-switch {
@@ -3487,7 +3487,7 @@ input[type="button"].btn-block {
     transform: translateX(0.75rem); }
   /* line 206, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-    background-color: rgba(54, 88, 125, 0.5); }
+    background-color: rgba(31, 68, 109, 0.5); }
 
 /* line 219, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
 .custom-select {
@@ -3506,9 +3506,9 @@ input[type="button"].btn-block {
   appearance: none; }
   /* line 236, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-select:focus {
-    border-color: #7198c2;
+    border-color: #4282c9;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
     /* line 245, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-select:focus::-ms-value {
       color: #495057;
@@ -3564,8 +3564,8 @@ input[type="button"].btn-block {
   opacity: 0; }
   /* line 317, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-file-input:focus ~ .custom-file-label {
-    border-color: #7198c2;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    border-color: #4282c9;
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
   /* line 323, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-file-input[disabled] ~ .custom-file-label,
   .custom-file-input:disabled ~ .custom-file-label {
@@ -3621,13 +3621,13 @@ input[type="button"].btn-block {
     outline: none; }
     /* line 392, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
     /* line 393, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
     /* line 394, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
   /* line 397, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-range::-moz-focus-outer {
     border: 0; }
@@ -3636,7 +3636,7 @@ input[type="button"].btn-block {
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background-color: #36587D;
+    background-color: #1F446D;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3647,7 +3647,7 @@ input[type="button"].btn-block {
         transition: none; } }
     /* line 412, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range::-webkit-slider-thumb:active {
-      background-color: #95b1d1; }
+      background-color: #6a9dd5; }
   /* line 417, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-range::-webkit-slider-runnable-track {
     width: 100%;
@@ -3661,7 +3661,7 @@ input[type="button"].btn-block {
   .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #36587D;
+    background-color: #1F446D;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3672,7 +3672,7 @@ input[type="button"].btn-block {
         transition: none; } }
     /* line 438, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range::-moz-range-thumb:active {
-      background-color: #95b1d1; }
+      background-color: #6a9dd5; }
   /* line 443, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-range::-moz-range-track {
     width: 100%;
@@ -3689,7 +3689,7 @@ input[type="button"].btn-block {
     margin-top: 0;
     margin-right: 0.2rem;
     margin-left: 0.2rem;
-    background-color: #36587D;
+    background-color: #1F446D;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3700,7 +3700,7 @@ input[type="button"].btn-block {
         transition: none; } }
     /* line 467, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
     .custom-range::-ms-thumb:active {
-      background-color: #95b1d1; }
+      background-color: #6a9dd5; }
   /* line 472, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_custom-forms.scss */
   .custom-range::-ms-track {
     width: 100%;
@@ -3807,7 +3807,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #36587D; }
+  background-color: #1F446D; }
 
 /* line 94, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_nav.scss */
 .nav-fill .nav-item {
@@ -4451,13 +4451,13 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #36587D;
+  color: #1F446D;
   background-color: #fff;
   border: 1px solid #dee2e6; }
   /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_pagination.scss */
   .page-link:hover {
     z-index: 2;
-    color: #1f3248;
+    color: #0e1f31;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -4465,7 +4465,7 @@ input[type="button"].btn-block {
   .page-link:focus {
     z-index: 3;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.25); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.25); }
 
 /* line 34, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_pagination.scss */
 .page-item:first-child .page-link {
@@ -4482,8 +4482,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #36587D;
-  border-color: #36587D; }
+  background-color: #1F446D;
+  border-color: #1F446D; }
 
 /* line 52, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_pagination.scss */
 .page-item.disabled .page-link {
@@ -4562,15 +4562,15 @@ input[type="button"].btn-block {
 /* line 51, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_badge.scss */
 .badge-primary {
   color: #fff;
-  background-color: #36587D; }
+  background-color: #1F446D; }
   /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   a.badge-primary:hover, a.badge-primary:focus {
     color: #fff;
-    background-color: #273f59; }
+    background-color: #142b45; }
   /* line 11, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_badge.scss */
   a.badge-primary:focus, a.badge-primary.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(54, 88, 125, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(31, 68, 109, 0.5); }
 
 /* line 51, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_badge.scss */
 .badge-secondary {
@@ -4588,15 +4588,15 @@ input[type="button"].btn-block {
 /* line 51, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_badge.scss */
 .badge-success {
   color: #fff;
-  background-color: #56A7D0; }
+  background-color: #3E82CE; }
   /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   a.badge-success:hover, a.badge-success:focus {
     color: #fff;
-    background-color: #3590be; }
+    background-color: #2c69ad; }
   /* line 11, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_badge.scss */
   a.badge-success:focus, a.badge-success.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(86, 167, 208, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(62, 130, 206, 0.5); }
 
 /* line 51, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_badge.scss */
 .badge-info {
@@ -4709,15 +4709,15 @@ input[type="button"].btn-block {
 
 /* line 48, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_alert.scss */
 .alert-primary {
-  color: #1c2e41;
-  background-color: #d7dee5;
-  border-color: #c7d0db; }
+  color: #102339;
+  background-color: #d2dae2;
+  border-color: #c0cbd6; }
   /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-primary hr {
-    border-top-color: #b7c3d1; }
+    border-top-color: #b1becc; }
   /* line 10, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-primary .alert-link {
-    color: #0d151d; }
+    color: #050b11; }
 
 /* line 48, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_alert.scss */
 .alert-secondary {
@@ -4733,15 +4733,15 @@ input[type="button"].btn-block {
 
 /* line 48, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_alert.scss */
 .alert-success {
-  color: #2d576c;
-  background-color: #ddedf6;
-  border-color: #d0e6f2; }
+  color: #20446b;
+  background-color: #d8e6f5;
+  border-color: #c9dcf1; }
   /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-success hr {
-    border-top-color: #bcdbec; }
+    border-top-color: #b5cfec; }
   /* line 10, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-success .alert-link {
-    color: #1e3a48; }
+    color: #142b44; }
 
 /* line 48, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_alert.scss */
 .alert-info {
@@ -4827,7 +4827,7 @@ input[type="button"].btn-block {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #36587D;
+  background-color: #1F446D;
   transition: width 0.6s ease; }
   @media (prefers-reduced-motion: reduce) {
     /* line 19, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_progress.scss */
@@ -4903,8 +4903,8 @@ input[type="button"].btn-block {
   .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #36587D;
-    border-color: #36587D; }
+    background-color: #1F446D;
+    border-color: #1F446D; }
   /* line 75, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/_list-group.scss */
   .list-group-item + .list-group-item {
     border-top-width: 0; }
@@ -5047,17 +5047,17 @@ input[type="button"].btn-block {
 
 /* line 4, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-primary {
-  color: #1c2e41;
-  background-color: #c7d0db; }
+  color: #102339;
+  background-color: #c0cbd6; }
   /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
-    color: #1c2e41;
-    background-color: #b7c3d1; }
+    color: #102339;
+    background-color: #b1becc; }
   /* line 14, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
   .list-group-item-primary.list-group-item-action.active {
     color: #fff;
-    background-color: #1c2e41;
-    border-color: #1c2e41; }
+    background-color: #102339;
+    border-color: #102339; }
 
 /* line 4, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-secondary {
@@ -5075,17 +5075,17 @@ input[type="button"].btn-block {
 
 /* line 4, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-success {
-  color: #2d576c;
-  background-color: #d0e6f2; }
+  color: #20446b;
+  background-color: #c9dcf1; }
   /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
   .list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
-    color: #2d576c;
-    background-color: #bcdbec; }
+    color: #20446b;
+    background-color: #b5cfec; }
   /* line 14, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
   .list-group-item-success.list-group-item-action.active {
     color: #fff;
-    background-color: #2d576c;
-    border-color: #2d576c; }
+    background-color: #20446b;
+    border-color: #20446b; }
 
 /* line 4, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-info {
@@ -5902,13 +5902,13 @@ a.close.disabled {
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-primary {
-  background-color: #36587D !important; }
+  background-color: #1F446D !important; }
 
 /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #273f59 !important; }
+  background-color: #142b45 !important; }
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-secondary {
@@ -5922,13 +5922,13 @@ button.bg-secondary:focus {
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-success {
-  background-color: #56A7D0 !important; }
+  background-color: #3E82CE !important; }
 
 /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #3590be !important; }
+  background-color: #2c69ad !important; }
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-info {
@@ -6030,7 +6030,7 @@ button.bg-dark:focus {
 
 /* line 20, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-primary {
-  border-color: #36587D !important; }
+  border-color: #1F446D !important; }
 
 /* line 20, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-secondary {
@@ -6038,7 +6038,7 @@ button.bg-dark:focus {
 
 /* line 20, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-success {
-  border-color: #56A7D0 !important; }
+  border-color: #3E82CE !important; }
 
 /* line 20, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-info {
@@ -9036,11 +9036,11 @@ button.bg-dark:focus {
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-primary {
-  color: #36587D !important; }
+  color: #1F446D !important; }
 
 /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-primary:hover, a.text-primary:focus {
-  color: #1f3248 !important; }
+  color: #0e1f31 !important; }
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-secondary {
@@ -9052,11 +9052,11 @@ a.text-secondary:hover, a.text-secondary:focus {
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-success {
-  color: #56A7D0 !important; }
+  color: #3E82CE !important; }
 
 /* line 17, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-success:hover, a.text-success:focus {
-  color: #2f81aa !important; }
+  color: #275d99 !important; }
 
 /* line 6, /Users/peter/OneDrive - GMIT/GUI/guiproject/node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-info {
@@ -9248,49 +9248,63 @@ nav.fixed-top {
 
 /* line 36, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 .light-text .nav-link {
-  color: #DDD; }
+  color: #DDD;
+  transition: color 0.2s; }
+
+/* line 40, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+.light-text .nav-link img {
+  opacity: 0.85;
+  transition: opacity 0.2s; }
+
+/* line 44, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+.light-text .nav-link:hover {
+  color: #FFF; }
+
+/* line 47, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+.light-text .nav-link:hover img {
+  opacity: 1; }
 
 /* Set up background image on first pane (PC) */
-/* line 41, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 52, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 #pane1 {
   background-image: url("../images/bg-home.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
 /* Observatory thumbnails for pane 1 (PC) */
-/* line 48, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 59, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 .obsThumb {
   display: inline-block;
   width: 180px;
   margin: 8px 0; }
-  /* line 52, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 63, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb img {
     width: 48px;
-    border: 2px solid #36587D;
+    border: 2px solid #1F446D;
     border-radius: 50%;
     float: left;
     margin-right: 9px; }
-  /* line 59, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 70, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h1, .obsThumb h2 {
     font-size: 14px;
     line-height: 0.8; }
-  /* line 63, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 74, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h1 {
     margin: 8px;
     color: white; }
-  /* line 67, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 78, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h2 {
-    color: #36587D; }
-  /* line 71, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+    color: #1F446D; }
+  /* line 82, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb:hover img {
     border: 2px solid white; }
 
-/* line 77, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 88, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 #pane2 {
   background-color: white;
   min-height: 100vh; }
 
-/* line 83, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 94, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 .transparent-bg {
   background: none; }
 

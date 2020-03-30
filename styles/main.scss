@@ -1,10 +1,10 @@
 /* Override bootstrap default colours (PC) */
 $theme-colors: (
-  "primary": #36587D,
-  "success": #56A7D0
+  "primary": #1F446D,
+  "success": #3E82CE
 );
 
-$primary: #36587D;
+$primary: #1F446D;
 
 /* Import bootstrap css (PC) */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -35,6 +35,17 @@ nav.fixed-top {
 }
 .light-text .nav-link {
 	color: #DDD;
+	transition: color 0.2s;
+}
+.light-text .nav-link img {
+	opacity: 0.85;
+	transition: opacity 0.2s;
+}
+.light-text .nav-link:hover {
+	color: #FFF;
+}
+.light-text .nav-link:hover img  {
+	opacity: 1;
 }
 
 /* Set up background image on first pane (PC) */
