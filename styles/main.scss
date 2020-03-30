@@ -30,6 +30,7 @@ nav {
 }
 nav.fixed-top {
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	background-color: rgba(0,0,0,0.7);
 }
 .light-text .nav-link {
