@@ -9264,47 +9264,63 @@ nav.fixed-top {
 .light-text .nav-link:hover img {
   opacity: 1; }
 
-/* Set up background image on first pane (PC) */
 /* line 52, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+.navbar-collapse.collapsing ul,
+.navbar-collapse.show ul {
+  margin-top: 8px;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  border-radius: 8px;
+  border: 1px solid #666; }
+  /* line 61, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  .navbar-collapse.collapsing ul li,
+  .navbar-collapse.show ul li {
+    margin: 8px; }
+
+/* Set up background image on first pane (PC) */
+/* line 68, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 #pane1 {
   background-image: url("../images/bg-home.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
 /* Observatory thumbnails for pane 1 (PC) */
-/* line 59, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 75, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 .obsThumb {
   display: inline-block;
   width: 180px;
   margin: 8px 0; }
-  /* line 63, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 79, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb img {
     width: 48px;
     border: 2px solid #1F446D;
     border-radius: 50%;
     float: left;
     margin-right: 9px; }
-  /* line 70, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 86, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h1, .obsThumb h2 {
     font-size: 14px;
     line-height: 0.8; }
-  /* line 74, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 90, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h1 {
     margin: 8px;
     color: white; }
-  /* line 78, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 94, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb h2 {
     color: #1F446D; }
-  /* line 82, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+  /* line 98, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
   .obsThumb:hover img {
     border: 2px solid white; }
 
-/* line 88, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 104, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 #pane2 {
   background-color: white;
   min-height: 100vh; }
 
-/* line 94, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
+/* line 110, /Users/peter/OneDrive - GMIT/GUI/guiproject/styles/main.scss */
 .transparent-bg {
   background: none; }
 

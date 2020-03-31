@@ -47,6 +47,22 @@ nav.fixed-top {
 .light-text .nav-link:hover img  {
 	opacity: 1;
 }
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+	ul {
+		margin-top: 8px;
+		justify-content: space-around;
+		display: flex;
+		width: 100%;
+		background-color: black;
+		left: 0;
+		border-radius: 8px;
+		border: 1px solid #666;
+		li {
+			margin: 8px;
+		}
+	}
+}
 
 /* Set up background image on first pane (PC) */
 #pane1 {
