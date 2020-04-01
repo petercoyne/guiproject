@@ -1,8 +1,8 @@
 // declare observatories array (PC)
 let observatories = [
-    ["Palomar", "San Diego, CA", "thumb-palomar.jpg"],
-    ["Hobby-Eberly", "Austin, TX", "thumb-hobby.jpg"],
-    ["Kitt Peak", "Tucson, AZ", "thumb-kittpeak.jpg"],
+    ["Palomar", 		"San Diego, CA", 	"thumb-palomar.jpg"],
+    ["Hobby-Eberly", 	"Austin, TX", 		"thumb-hobby.jpg"],
+    ["Kitt Peak", 		"Tucson, AZ", 		"thumb-kittpeak.jpg"],
 ];
 
 // Add observatory to dom function (PC)
