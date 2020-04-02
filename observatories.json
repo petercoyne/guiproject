@@ -3,21 +3,21 @@
     "name": "Palomar",
     "location": "San Diego, CA",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "thumb": "/images/thumb-palomar.jpg",
-    "image": "/images/sony-xperia-z3-large.jpg"
+    "thumb": "./images/thumb-palomar.jpg",
+    "image": "./images/sony-xperia-z3-large.jpg"
   },
   {
     "name": "Hobby-Eberly",
     "location": "Austin, TX",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "thumb": "/images/thumb-hobby.jpg",
-    "image": "/images/iphone6-large.jpg"
+    "thumb": "./images/thumb-hobby.jpg",
+    "image": "./images/iphone6-large.jpg"
   },
   {
     "name": "Kitt Peak",
     "location": "Tucson, AZ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "thumb": "/images/thumb-kittpeak.jpg",
-    "image": "/images/iphone6-large.jpg"
+    "thumb": "./images/thumb-kittpeak.jpg",
+    "image": "./images/iphone6-large.jpg"
   }
 ]
