@@ -10,15 +10,10 @@ $.ajax({
 	success: function (data) {
 		// put resulting array into observatories variable (PC)
 		observatories = data;
+		console.log(observatories);
+		setNumObservatoriesOnline(observatories);
+		buildObservatoryThumbs(observatories);
 	}
-});
-
-// Need to wait til document ready to use observatories variable
-// as the ajax function is asynchronous (PC)
-$(document).ready(function () {
-	console.log(observatories);
-	setNumObservatoriesOnline(observatories);
-	buildObservatoryThumbs(observatories);
 });
 
 // iterate through observatories array and generate html for thumbnails (PC)
