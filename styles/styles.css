@@ -1,0 +1,121 @@
+/* Default font (PC) */
+* {
+	font-family: Inter;
+}
+
+/* Smooth scrolling on anchor links (PC) */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Black background (PC) */
+body {
+	background-color: black;
+}
+
+/* General colours (PC) */
+.lightblue {
+	color: #3E82CE;
+}
+.darkblue {
+	color: #1F446D;
+}
+
+/* Override primary button bg colour (PC) */
+.btn-primary {
+	background-color: #1F446D;
+	border: none;
+}
+
+/* -------- Nav Bar -------- */
+	/* Navbar bg colour transition (PC) */
+	nav {
+		transition: background-color 0.3s;
+	}
+	/* Navbar bg colour and bg blur (PC) */
+	nav.fixed-top {
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		background-color: rgba(0,0,0,0.7);
+	}
+	/* Muted text colour on navbar links (PC) */
+	.light-text .nav-link {
+		color: #DDD;
+		transition: color 0.2s;
+	}
+	/* Muted icon colour on navbar links (PC) */
+	.light-text .nav-link img {
+		opacity: 0.85;
+		transition: opacity 0.2s;
+	}
+	/* Bright text colour on navbar links hovered (PC) */
+	.light-text .nav-link:hover {
+		color: #FFF;
+	}
+	/* Bright icon colour on navbar links hovered (PC) */
+	.light-text .nav-link:hover img  {
+		opacity: 1;
+	}
+	/* Gap between logo and expanded mobile nav bar (PC) */
+	.navbar-collapse.collapsing ul,
+	.navbar-collapse.show ul {
+		margin-top: 8px;
+	}
+	/* background colour of navbar pills */
+	a.nav-link.active {
+		background-color: #1F446D !important;
+	}
+	/* align the cart icon a bit better */
+	nav img {
+		margin-top: -4px;
+	}
+
+/* Set up background image on first pane (PC) */
+#pane1 {
+	background-image: url("../images/bg-home.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Observatory thumbnails for pane 1 (PC) */
+	/* Basic positioning for thumb blocks */
+	.obsThumb {
+		display: inline-block;
+		width: 180px;
+		margin: 8px 0;
+	}
+	/* round and border the thumbs */
+	.obsThumb img {
+		width: 48px;
+		border: 2px solid $primary;
+		border-radius: 50%;
+		float: left;
+		margin-right: 9px;
+	}
+	/* size down the heading tags */
+	.obsThumb h1, h2 {
+		font-size: 14px;
+		line-height: 0.8;
+	}
+	/* give h1 a margin and style */
+	.obsThumb h1 {
+		margin: 8px 0;
+		color: white;
+	}
+	/* give h2 a colour */
+	.obsThumb h2 {
+		color: #1F446D;
+	}
+	/* border effect for thumb image when .obsThumb is hovered over */
+	.obsThumb:hover img {
+		border: 2px solid white;
+	}
+
+#pane2 {
+	background-color: white;
+	min-height: 100vh;
+}
+
+.transparent-bg {
+	background: none;
+}
