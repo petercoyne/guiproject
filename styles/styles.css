@@ -20,6 +20,10 @@ body {
 .darkblue {
 	color: #1F446D;
 }
+/* transparent bg class, initially for jumbotron (PC) */
+.transparent-bg {
+	background: none;
+}
 
 /* Override primary button bg colours (PC) */
 .btn-primary {
@@ -60,11 +64,22 @@ body {
 	.light-text .nav-link:hover img  {
 		opacity: 1;
 	}
-	/* Gap between logo and expanded mobile nav bar (PC) */
-	.navbar-collapse.collapsing ul,
-	.navbar-collapse.show ul {
-		margin-top: 8px;
+	/* position stuff for the .navbar-collapse class (PC) */
+	.navbar-collapse.collapsing,
+	.navbar-collapse.show{
+		position: absolute;
+		top: 69px;
+		left: 0;
+		right: 0;
+		padding: 8px;
+		background-color: rgba(0,0,0,0.8);
 	}
+	/* center content of the navbar ul */
+	.navbar-collapse ul {
+		display: flex;
+		justify-content: center;
+	}
+
 	/* background colour of navbar pills (PC) */
 	a.nav-link.active {
 		background-color: #1F446D !important;
@@ -122,8 +137,4 @@ body {
 #pane2 {
 	background-color: white;
 	min-height: 100vh;
-}
-
-.transparent-bg {
-	background: none;
 }
