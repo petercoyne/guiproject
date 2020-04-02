@@ -21,9 +21,13 @@ body {
 	color: #1F446D;
 }
 
-/* Override primary button bg colour (PC) */
+/* Override primary button bg colours (PC) */
 .btn-primary {
 	background-color: #1F446D;
+	border: none;
+}
+.btn-primary:hover {
+	background-color: #3E82CE;
 	border: none;
 }
 
@@ -61,11 +65,11 @@ body {
 	.navbar-collapse.show ul {
 		margin-top: 8px;
 	}
-	/* background colour of navbar pills */
+	/* background colour of navbar pills (PC) */
 	a.nav-link.active {
 		background-color: #1F446D !important;
 	}
-	/* align the cart icon a bit better */
+	/* align the cart icon a bit better (PC) */
 	nav img {
 		margin-top: -4px;
 	}
@@ -78,35 +82,39 @@ body {
 }
 
 /* Observatory thumbnails for pane 1 (PC) */
-	/* Basic positioning for thumb blocks */
+	/* Basic positioning for thumb blocks (PC) */
 	.obsThumb {
 		display: inline-block;
 		width: 180px;
 		margin: 8px 0;
 	}
-	/* round and border the thumbs */
+	/* round and border the thumbs (PC) */
 	.obsThumb img {
 		width: 48px;
-		border: 2px solid $primary;
+		border: 2px solid #3E82CE;
 		border-radius: 50%;
 		float: left;
 		margin-right: 9px;
 	}
-	/* size down the heading tags */
+	/* size down the heading tags (PC) */
 	.obsThumb h1, h2 {
 		font-size: 14px;
 		line-height: 0.8;
 	}
-	/* give h1 a margin and style */
+	/* give h1 a margin and style (PC) */
 	.obsThumb h1 {
 		margin: 8px 0;
 		color: white;
 	}
-	/* give h2 a colour */
+	/* give h2 a colour (PC) */
 	.obsThumb h2 {
-		color: #1F446D;
+		color: #3E82CE;
 	}
-	/* border effect for thumb image when .obsThumb is hovered over */
+	/* make h2 not underline when .obsThumb is hovered over (PC) */
+	.obsThumb:hover {
+		text-decoration: none;
+	}
+	/* border effect for thumb image when .obsThumb is hovered over (PC) */
 	.obsThumb:hover img {
 		border: 2px solid white;
 	}

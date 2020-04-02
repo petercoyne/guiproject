@@ -1,37 +1,46 @@
-// declare observatories array (PC)
-let observatories = [
-    ["Palomar", 		"San Diego, CA", 	"thumb-palomar.jpg"],
-    ["Hobby-Eberly", 	"Austin, TX", 		"thumb-hobby.jpg"],
-    ["Kitt Peak", 		"Tucson, AZ", 		"thumb-kittpeak.jpg"],
-];
+// Declare observatories array (PC)
+let observatories = [];
 
-// Add observatory to dom function (PC)
-function addObservatoryThumb(thumbHTML) {
-	// set innerhtml of thumbholder to result from iteration below (PC)
-	document.getElementById("observatoriesThumbHolder").innerHTML += thumbHTML;
-}
+// Call JQuery .ajax function to fetch array from observatories.json (PC)
+// https://api.jquery.com/jquery.ajax/
+$.ajax({
+	// URL for ajax function (PC)
+	url: "observatories.json",
+	// success function (PC)
+	success: function (data) {
+		// put resulting array into observatories variable (PC)
+		observatories = data;
+	}
+});
+
+// Need to wait til document ready to use observatories variable
+// as the ajax function is asynchronous (PC)
+$(document).ready(function () {
+	console.log(observatories);
+	setNumObservatoriesOnline(observatories);
+	buildObservatoryThumbs(observatories);
+});
 
 // iterate through observatories array and generate html for thumbnails (PC)
-for (let i = 0; i < observatories.length; i++) {
-	// put observatory name from array into var (PC)
-	let obsName = observatories[i][0];
-	// put observatory location from array into var (PC)
-	let obsLocation = observatories[i][1];
-	// put observatory thumnail name from array into var (PC)
-	let obsImage = observatories[i][2];
+function buildObservatoryThumbs(observatories) {
+	for (let i = 0; i < observatories.length; i++) {
+		// declare htmlString var and add relevant html (PC)
+		let htmlString = "<a class='obsThumb' href='#" + observatories[i].name + "'>";
+		htmlString += "<img src='" + observatories[i].thumb + "'/>";
+		htmlString += "<h1>" + observatories[i].name + "</h1>";
+		htmlString += "<h2>" + observatories[i].location + "</h2>";
+		htmlString += "</a>";
 
-	// declare htmlString var and add relevant html (PC)
-	let htmlString = "<a class='obsThumb' href='#" + obsName + "'>";
-	htmlString += "<img src='images/" + obsImage + "'/>";
-	htmlString += "<h1>" + obsName + "</h1>";
-	htmlString += "<h2>" + obsLocation + "</h2>";
-	htmlString += "</a>";
-
-	// call addObservatory function (PC)
-	addObservatoryThumb(htmlString);
+		// add htmlString to innerhtml of thumbholder (PC)
+		document.getElementById("obsThumbHolder").innerHTML += htmlString;
+	}
 }
 
-// manage navbar on scroll (PC) adapted from
+function setNumObservatoriesOnline(observatories) {
+	document.getElementById("obsOnline").innerHTML = observatories.length + " Observatories Online"
+}
+
+// -------- navbar effects on scroll (PC) adapted from: --------
 // https://stackoverflow.com/questions/34551611/trying-to-fade-in-a-background-color-of-my-navigation-bar-after-i-scroll
 // var for y position (PC)
 let position = 0;
