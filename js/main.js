@@ -5,7 +5,7 @@ let observatories = [];
 // https://api.jquery.com/jquery.ajax/
 $.ajax({
 	// URL for ajax function (PC)
-	url: "observatories.json",
+	url: "./observatories.json",
 	// success function (PC)
 	success: function (data) {
 		// put resulting array into observatories variable (PC)
