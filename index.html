@@ -18,6 +18,7 @@
 	<title>Stelluminator</title>
 </head>
 
+<!-- body tag with scrollspy from https://getbootstrap.com/docs/4.4/components/scrollspy/ (PC) -->
 <body data-spy="scroll" data-target="nav">
 
 	<div id="pane1" class="pb-5">
@@ -25,8 +26,8 @@
 		<!-- spacer div with margin-bottom of 5 and padding on the y axis of 3 (PC) -->
 		<div class="spacer mb-5 py-3"></div>
 
-		<!-- navbar adapted from getbootstrap.com (PC) -->
-		<nav class="navbar navbar-expand-lg navbar-dark">
+		<!-- navbar adapted from https://getbootstrap.com/docs/4.4/components/navbar/ (PC) -->
+		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
 				<a class="navbar-brand" href="#"><img src="images/logo.svg" class="mr-3" />stelluminator</a>
 
@@ -45,19 +46,20 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#pane3">About Us</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#pane3">Log In</a>
+						<li class="nav-item" id="navLogin">
+							<a class="nav-link" href="#pane3">Login</a>
 						</li>
 
+						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
 						<li class="nav-item">
-							<a class="nav-link" href="#pane3"><img src="images/icon-cart.svg"></a>
+							<a id="navCart" class="nav-link" href="#pane3"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger">3</span></a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-		<!-- jumbotron adapted from getbootstrap.com (PC) -->
+		<!-- jumbotron adapted from https://getbootstrap.com/docs/4.4/components/jumbotron/ (PC) -->
 		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
 			<div class="container">
 				<h1 class="h1 py-3">Astro-imaging, <span class="lightblue">democratised.</span></h1>
@@ -69,7 +71,7 @@
 
 		<!-- container for observatory thumbnails (PC) -->
 		<div class="container">
-			<h6 id="obsOnline" class="text-uppercase font-weight-light text-light">Observatories Online</h6>
+			<h6 class="text-uppercase font-weight-light text-light"><span id="obsOnline"> </span> Observatories Online</h6>
 			<div id="obsThumbHolder" class="pb-5 text-light"></div>
 		</div>
 
@@ -77,17 +79,111 @@
 
 	<div id="pane2">
 		<div class="container py-5">
-			<h1>Observatories Go Here</h1>
+			<h1 class="h1">Observatories</h1>
+			<h2 class="display-4 font-weight-bold mt-5">Palomar</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<figure class="figure">
+					  <img src="images/full-palomar.jpg" class="figure-img img-fluid rounded" alt="Hale Telescope">
+					  <figcaption class="figure-caption">Hale Telescope</figcaption>
+					</figure>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<table class="table table-hover">
+						<tr>
+							<td>icon</td>
+							<td>33°21′23″N 116°51′54″W</td>
+						</tr>
+						<tr>
+							<td>icon</td>
+							<td>1,712 m</td>
+						</tr>
+						<tr>
+							<td>icon</td>
+							<td>1928</td>
+						</tr>
+							<tr>
+							<td>icon</td>
+							<td>4</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-6 col-lg-9 d-sm-none d-md-none d-lg-block">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="addToCart p-3 mb-3">
+					    <label for="exampleFormControlSelect1">Telescope</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>Hale Telescope</option>
+						  <option>Interferometer</option>
+						  <option>Samuel Oschin</option>
+						  <option>Schmidt Camera</option>
+						</select>
+						<label for="customRange1" class="mt-3">Hours to rent: <span id="rangeValHolder">1</span></label>
+						<input type="range" class="custom-range" min="1" max="5" value="1" id="customRange1" oninput="showVal(this.value)">
+						<a class="btn btn-primary text-light mt-3 py-3 btn-block">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+			<h2 class="display-4 font-weight-bold mt-5">Palomar</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<img class="img-fluid" src="images/full-palomar.jpg"/>
+					<table class="table table-striped table-hover">
+						<tr>
+							<td>icon</td>
+							<td>33°21′23″N 116°51′54″W</td>
+						</tr>
+						<tr>
+							<td>icon</td>
+							<td>1,712 m</td>
+						</tr>
+						<tr>
+							<td>icon</td>
+							<td>1928</td>
+						</tr>
+							<tr>
+							<td>icon</td>
+							<td>4</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
+				</div>
+				<div class="d-lg-none d-md-block d-sm-none col-md-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="addToCart p-3">
+					    <label for="exampleFormControlSelect1">Telescope</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>Hale Telescope</option>
+						  <option>Interferometer</option>
+						  <option>Samuel Oschin</option>
+						  <option>Schmidt Camera</option>
+						</select>
+						<label for="customRange1" class="mt-3">Hours to rent: <span id="rangeValHolder">1</span></label>
+						<input type="range" class="custom-range" min="1" max="5" value="1" id="customRange1" oninput="showVal(this.value)">
+						<a class="btn btn-primary text-light mt-3 py-3 btn-block">Add to Cart</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
 
-<!-- import main,js (PC) -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- call main,js (PC) -->
 <script src="js/main.js"></script>

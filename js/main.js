@@ -6,8 +6,8 @@ let observatories = [];
 $.ajax({
 	// URL for ajax function (PC)
 	url: "./observatories.json",
-	// success function (PC)
-	success: function (data) {
+	// function called when ajax successfully retrieves observatories.json (PC)
+	success: function(data) {
 		// put resulting array into observatories variable (PC)
 		observatories = data;
 		console.log(observatories);
@@ -32,7 +32,11 @@ function buildObservatoryThumbs(observatories) {
 }
 
 function setNumObservatoriesOnline(observatories) {
-	document.getElementById("obsOnline").innerHTML = observatories.length + " Observatories Online"
+	document.getElementById("obsOnline").innerHTML = observatories.length;
+}
+
+function showVal(newVal){
+    document.getElementById("rangeValHolder").innerHTML = newVal;
 }
 
 // -------- navbar effects on scroll (PC) adapted from: --------
@@ -43,7 +47,7 @@ let position = 0;
 let nav = $("nav");
 // var for the jumbotron element (PC)
 let jumbo = $("#homeJumbo");
-// jquery scroll function (PC)
+// jquery "on scroll" function (PC)
 $(document).scroll(function () {
 	// update position var with scroll top value (PC)
 	position = $(this).scrollTop();
@@ -51,7 +55,7 @@ $(document).scroll(function () {
 	if (position > 80) {
 		// add class fixed-top to nav element (PC)
 		nav.addClass("fixed-top");
-		// Kind of hacky, spacing top of jumbo when nav removed from flow (PC)
+		// Kind of hacky, add spacing to top of jumbo when nav removed from flow (PC)
 		jumbo.css('margin-top', '116px');
 	} else {
 		// if the position is < 80, remove fixed-top class (PC)

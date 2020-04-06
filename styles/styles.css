@@ -84,9 +84,9 @@ body {
 	a.nav-link.active {
 		background-color: #1F446D !important;
 	}
-	/* align the cart icon a bit better (PC) */
-	nav img {
-		margin-top: -4px;
+	/* align the cart icon and badge a bit better (PC) */
+	#navCart {
+		padding-top: 6px;
 	}
 
 /* Set up background image on first pane (PC) */
@@ -137,4 +137,14 @@ body {
 #pane2 {
 	background-color: white;
 	min-height: 100vh;
+}
+
+.addToCart {
+	background-color: #FCFCFC;
+	border-radius: 16px;
+	border: 1px solid #EEE;
+}
+
+iframe {
+	border-radius: 16px;
 }
