@@ -148,3 +148,9 @@ body {
 iframe {
 	border-radius: 16px;
 }
+
+@media (max-width: 991px) {
+	.obsMapOrder iframe {
+		display: none;
+	}
+}
