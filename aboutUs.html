@@ -2,6 +2,9 @@
 
 <!doctype html>
 <html lang="en">
+<style>
+div {border: 1px solid red;}
+</style>
 
 <head>
 	<!-- Required meta tags -->
@@ -15,7 +18,7 @@
 
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<title>Stelluminator</title>
+	<title>Stelluminator - About us</title>
 </head>
 
 <!-- body tag with scrollspy from https://getbootstrap.com/docs/4.4/components/scrollspy/ (PC) -->
@@ -46,8 +49,7 @@
 							<a class="nav-link" href="#pane2">Observatories</a>
 						</li>
 						<li class="nav-item">
-						<!--NMD Added main link to about us page -->
-							<a class="nav-link" href="aboutUs.html">About Us</a>
+							<a class="nav-link" href="#pane3">About Us</a>
 						</li>
 						<li class="nav-item" id="navLogin">
 							<a class="nav-link" href="#pane3">Login</a>
@@ -62,15 +64,7 @@
 			</div>
 		</nav>
 
-		<!-- jumbotron adapted from https://getbootstrap.com/docs/4.4/components/jumbotron/ (PC) -->
-		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
-			<div class="container">
-				<h1 class="h1 py-3">Astro-imaging, <span class="lightblue">democratised.</span></h1>
-				<p class="lead pb-5 text-muted">Stelluminator makes advanced astrophotography affordable for hobbyists.</p>
-				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3">Browse Observatories</a>
-				<a class="btn btn-primary px-5 py-3 mb-3">Learn More</a>
-			</div>
-		</div>
+	
 
 		<!-- container for observatory thumbnails (PC) -->
 		<div class="container">
@@ -79,53 +73,54 @@
 		</div>
 
 	</div> <!-- pane1 close -->
-
+	<!-- NMD - Edited to suit About us page -->
 	<div id="pane2">
 		<div class="container py-5">
-			<h1 class="h1">Observatories</h1>
+			<h1 class="h1">About us</h1>
 			<hr />
-			<h2 class="display-4 font-weight-bold mt-5">Palomar</h2>
+			<h2 class="display-3 font-weight-bold mt-5">Staff</h2>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
-					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
-					<table class="table table-hover">
-						<tr>
-							<td><img src="images/icon-location.svg"></td>
-							<td>33°21′23″N 116°51′54″W</td>
-						</tr>
-						<tr>
-							<td><img src="images/icon-altitude.svg"></td>
-							<td>1,712 m</td>
-						</tr>
-						<tr>
-							<td><img src="images/icon-calendar.svg"></td>
-							<td>Est. 1928</td>
-						</tr>
-						<tr>
-							<td><img src="images/icon-telescope.svg"></td>
-							<td>4 Telescopes</td>
-						</tr>
-					</table>
+					<!-- NMD - Changed image form original to suit page -->
+					<img src="images/staffTeam.jpg" class="img-fluid rounded" alt="Staff team">
+					
+					<img src="images/percent100.jpg" class="img-fluid rounded" alt="certifications">
+					
 				</div>
-				<div class="col-lg-5 col-md-6">
-					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
-					<p>Astronomer George Ellery Hale, whose vision created the Palomar Observatory, built the world's largest telescope four times in succession.</p>
+				<div class="col-lg-5 col-md-6 row" >
+				<!-- <h1 class="h1">Staff</h1>	-->
+					<p>insert text here</p>
+					<p>insert text here</p>
+				
 				</div>
-				<div class="col-lg-3 obsMapOrder">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
-					<div class="addToCart p-3 mb-3">
-						<label for="exampleFormControlSelect1">Telescope</label>
-						<select class="form-control" id="exampleFormControlSelect1">
-							<option>Hale Telescope</option>
-							<option>Interferometer</option>
-							<option>Samuel Oschin</option>
-							<option>Schmidt Camera</option>
-						</select>
-						<label for="customRange1" class="mt-3">Hours to rent: <span id="rangeValHolder">1</span></label>
-						<input type="range" class="custom-range" min="1" max="5" value="1" id="customRange1" oninput="showVal(this.value)">
-						<a class="btn btn-primary text-light mt-3 py-3 btn-block">Add to Cart</a>
-					</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- NMD - Added this div section  -->
+	<div id="pane2">
+		<div class="container py-5">
+			<h1 class="display-4 font-weight-bold mt-5">Dedication to you.</h1>
+			
+			<div class="row">
+			
+				<div class="col-lg-4 col-md-6">
+					<!-- NMD - Changed image form original to suit page -->
+					<img src="images/businessmenInSuit.jpg" class="img-fluid rounded" alt="Business Meeting">
+					<br><br><br><br><br><br>
+					<img src="images/businessMeetingTable.jpg" class="img-fluid rounded" alt="certifications">
+					
+					
 				</div>
+				<div class="col-lg-5 col-md-6" class="row" >
+				<!-- <h1 class="h1">Staff</h1>	-->
+					<p>We here at stelluminator wish to provide you with the best service possible. </p>
+					<p><br></p>
+					<p><br></p><p><br></p><p><br></p><p></p><p><br></p>
+					<p>testtext</p>
+
+				</div>
+				
 			</div>
 		</div>
 	</div>
