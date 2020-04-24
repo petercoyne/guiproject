@@ -1,23 +1,26 @@
 [
   {
+	"id": "palomar",
     "name": "Palomar",
     "location": "San Diego, CA",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "thumb": "images/thumb-palomar.jpg",
-    "image": "images/sony-xperia-z3-large.jpg"
+	"price": 180,
+	"numHours": 1
   },
   {
+	"id": "hobby",
     "name": "Hobby-Eberly",
     "location": "Austin, TX",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "thumb": "images/thumb-hobby.jpg",
-    "image": "images/iphone6-large.jpg"
+	"price": 310,
+	"numHours": 1
   },
   {
+	"id": "kitt",
     "name": "Kitt Peak",
     "location": "Tucson, AZ",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "thumb": "images/thumb-kittpeak.jpg",
-    "image": "images/iphone6-large.jpg"
+	"price": 260,
+	"numHours": 1
   }
 ]

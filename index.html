@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<title>Stelluminator</title>
+	<title>Stellumina</title>
 </head>
 
 <!-- body tag with scrollspy from https://getbootstrap.com/docs/4.4/components/scrollspy/ (PC) -->
@@ -30,7 +30,7 @@
 		<!-- navbar adapted from https://getbootstrap.com/docs/4.4/components/navbar/ (PC) -->
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
-				<a class="navbar-brand" href="#"><img src="images/logo.svg" class="mr-3" />stelluminator</a>
+				<a class="navbar-brand" href="#pane1"><img src="images/logo.svg" class="mr-3" />stellumina</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNavbar" aria-controls="theNavbar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
 					<ul class="nav nav-pills ml-auto light-text font-weight-light">
 						<li class="nav-item">
 							<!--NMD Added main link to home page -->
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="#pane1">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#pane2">Observatories</a>
@@ -55,7 +55,7 @@
 
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
 						<li class="nav-item">
-							<a id="navCart" class="nav-link" href="#pane3"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
+							<a id="navCart" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -66,7 +66,7 @@
 		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
 			<div class="container">
 				<h1 class="h1 py-3">Astro-imaging, <span class="lightblue">democratised.</span></h1>
-				<p class="lead pb-5 text-muted">Stelluminator makes advanced astrophotography affordable for hobbyists.</p>
+				<p class="lead pb-5 text-muted">Stellumina makes advanced astrophotography affordable for hobbyists.</p>
 				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3">Browse Observatories</a>
 				<a class="btn btn-primary px-5 py-3 mb-3">Learn More</a>
 			</div>
@@ -80,7 +80,7 @@
 
 	</div> <!-- pane1 close -->
 
-	<div id="pane2">
+	<div id="pane2" class="pt-5">
 		<div class="container py-5">
 			<h1 class="h1">Observatories</h1>
 			<hr />
@@ -114,21 +114,75 @@
 				<div class="col-lg-3 obsMapOrder">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
 					<div class="addToCart p-3 mb-3">
-						<label for="exampleFormControlSelect1">Telescope</label>
-						<select class="form-control" id="exampleFormControlSelect1">
-							<option>Hale Telescope</option>
-							<option>Interferometer</option>
-							<option>Samuel Oschin</option>
-							<option>Schmidt Camera</option>
-						</select>
-						<label for="customRange1" class="mt-3">Hours to rent: <span id="rangeValHolder">1</span></label>
-						<input type="range" class="custom-range" min="1" max="5" value="1" id="customRange1" oninput="showVal(this.value)">
-						<a class="btn btn-primary text-light mt-3 py-3 btn-block">Add to Cart</a>
+						<h6>Price per hour</h6>
+						<h3>€<span id="price0"></span></h3>
+						<hr/>
+						<div class="cartMid my-3">
+							<label for="range0">Hours: <span id="hoursHolder0">1</span> <span id="badge0" class="badge badge-success"></span></label>
+							<input type="range" class="custom-range" min="1" max="5" value="1" id="range0" oninput="setHours(0, this.value)">
+						</div>
+						<a data-obs-id="0" class="addToCartBtn btn btn-primary text-light py-3 btn-block">Add to Cart</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal https://getbootstrap.com/docs/4.4/components/modal/ (PC) -->
+	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title">Shopping Cart</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+		  <table class="table">
+			  <thead>
+				<tr>
+				  <th scope="col">Item</th>
+				  <th scope="col">Observatory</th>
+				  <th scope="col">Hours</th>
+				  <th scope="col">Cost</th>
+				  <th scope="col"></th>
+				</tr>
+			  </thead>
+			  <tbody id="cartContents">
+				<tr>
+				  <th scope="row">1</th>
+				  <td>Mark</td>
+				  <td>Otto</td>
+				  <td>@mdo</td>
+				  <td><button type="button" class="btn btn-danger" onClick="deleteItem()">Delete</button></td>
+				</tr>
+				<tr>
+				  <th scope="row">2</th>
+				  <td>Jacob</td>
+				  <td>Thornton</td>
+				  <td>@fat</td>
+				  <td><button type="button" class="btn btn-danger">Delete</button></td>
+				</tr>
+				<tr>
+				  <th scope="row">3</th>
+				  <td>Larry</td>
+				  <td>the Bird</td>
+				  <td>@twitter</td>
+				  <td><button type="button" class="btn btn-danger">Delete</button></td>
+				</tr>
+			  </tbody>
+			</table>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+			<button type="button" class="btn btn-primary">Check out</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
 </body>
 
 </html>

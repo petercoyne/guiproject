@@ -150,7 +150,7 @@ iframe {
 }
 
 @media (max-width: 991px) {
-	.obsMapOrder iframe {
-		display: none;
+    .obsMapOrder iframe {
+        display: none;
 	}
 }
