@@ -66,7 +66,11 @@ function initCart() {
 }
 
 function updateCartIcon() {
-	document.getElementById("navBadge").innerHTML = cart.length;
+	if (cart.length == 0) {
+		document.getElementById("navBadge").innerHTML = "";
+	} else {
+		document.getElementById("navBadge").innerHTML = cart.length;
+	}
 }
 
 function cartArrayToStorage() {
@@ -80,21 +84,40 @@ function cartStorageToArray() {
 
 function populateCartModal() {
 	$("#cartContents").html("");
+	let hoursTotal = 0;
+	let costTotal = 0;
 	for (let i = 0; i < cart.length; i++) {
 		let obsID = cart[i][0];
+		let obsHours = cart[i][1];
+		let obsCost = cart[i][2];
+		hoursTotal += Number(obsHours);
+		costTotal += obsCost;
 		$("#cartContents").append("<tr>");
-		$("#cartContents").append("<td>" + i + "</td>");
 		$("#cartContents").append("<td>" + observatories[obsID].name + "</td>");
-		$("#cartContents").append("<td>" + i + "</td>");
-		$("#cartContents").append("<td>" + i + "</td>");
-		$("#cartContents").append("<td>" + i + "</td>");
+		$("#cartContents").append("<td>" + obsHours + "</td>");
+		$("#cartContents").append("<td>€" + obsCost + "</td>");
+		$("#cartContents").append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>X</button></td>");
 		$("#cartContents").append("</tr>");
 	}
+	$("#cartContents").append("<tr class='table-active'>");
+	$("#cartContents").append("<td>Total</td>");
+	$("#cartContents").append("<td>" + hoursTotal + "</td>");
+	$("#cartContents").append("<td>€" + costTotal + "</td>");
+	$("#cartContents").append("<td></td>");
+	$("#cartContents").append("</tr>");
+	console.log("finishing cart total");
+}
+
+function deleteCartItem(cartID) {
+	cart.splice(cartID, 1);
+	cartArrayToStorage();
+	updateCartIcon();
+	populateCartModal();
 }
 
 $(".addToCartBtn").click(function() {
 	let obsID = this.getAttribute("data-obs-id");
-	cart.push([obsID, observatories[obsID].numHours]);
+	cart.push([obsID, observatories[obsID].numHours, observatories[obsID].cost]);
 	updateCartIcon();
 	populateCartModal();
 	cartArrayToStorage();
