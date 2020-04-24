@@ -1,0 +1,309 @@
+<!-- Starter template from getbootstrap.com (PC) -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<title>Stelluminator</title>
+	
+</head>
+
+<!--NMD Login button template: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal  -->
+<style>
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<!-- body tag with scrollspy from https://getbootstrap.com/docs/4.4/components/scrollspy/ (PC) -->
+<body data-spy="scroll" data-target="nav">
+
+	<!-- First pane, padding-bottom 5 (PC) -->
+	<div id="pane1" class="pb-5">
+
+		<!-- spacer div with margin-bottom of 5 and padding on the y axis of 3 (PC) -->
+		<div class="spacer mb-5 py-3"></div>
+
+		<!-- navbar adapted from https://getbootstrap.com/docs/4.4/components/navbar/ (PC) -->
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="images/logo.svg" class="mr-3" />stelluminator</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNavbar" aria-controls="theNavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="theNavbar">
+					<ul class="nav nav-pills ml-auto light-text font-weight-light">
+						<li class="nav-item">
+							<!--NMD Added main link to home page -->
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#pane2">Observatories</a>
+						</li>
+						<li class="nav-item">
+						<!--NMD Added main link to about us page -->
+							<a class="nav-link" href="aboutUs.html">About Us</a>
+						</li>
+						<li class="nav-item" id="navLogin">
+							<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" <a class="nav-link" href="#pane3">>Login</a></button>
+
+						</li>
+
+						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
+						<li class="nav-item">
+							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- jumbotron adapted from https://getbootstrap.com/docs/4.4/components/jumbotron/ (PC) -->
+		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
+			<div class="container">
+				<h1 class="h1 py-3">Astro-imaging, <span class="lightblue">democratised.</span></h1>
+				<p class="lead pb-5 text-muted">Stelluminator makes advanced astrophotography affordable for hobbyists.</p>
+				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3">Browse Observatories</a>
+				<a class="btn btn-primary px-5 py-3 mb-3">Learn More</a>
+			</div>
+		</div>
+
+		<!-- container for observatory thumbnails (PC) -->
+		<div class="container">
+			<h6 class="text-uppercase font-weight-light text-light"><span id="obsOnline"> </span> Observatories Online</h6>
+			<div id="obsThumbHolder" class="pb-5 text-light"></div>
+		</div>
+
+	</div> <!-- pane1 close -->
+
+	<div id="pane2">
+		<div class="container py-5">
+			<h1 class="h1">Observatories</h1>
+			<hr />
+			<h2 class="display-4 font-weight-bold mt-5">Palomar</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
+					<table class="table table-hover">
+						<tr>
+							<td><img src="images/icon-location.svg"></td>
+							<td>33°21′23″N 116°51′54″W</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-altitude.svg"></td>
+							<td>1,712 m</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-calendar.svg"></td>
+							<td>Est. 1928</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-telescope.svg"></td>
+							<td>4 Telescopes</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
+					<p>Astronomer George Ellery Hale, whose vision created the Palomar Observatory, built the world's largest telescope four times in succession.</p>
+				</div>
+				<div class="col-lg-3 obsMapOrder">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<div class="addToCart p-3 mb-3">
+						<label for="exampleFormControlSelect1">Telescope</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+							<option>Hale Telescope</option>
+							<option>Interferometer</option>
+							<option>Samuel Oschin</option>
+							<option>Schmidt Camera</option>
+						</select>
+						<label for="customRange1" class="mt-3">Hours to rent: <span id="rangeValHolder">1</span></label>
+						<input type="range" class="custom-range" min="1" max="5" value="1" id="customRange1" oninput="showVal(this.value)">
+						<a data-obs-id="2" class="addToCartBtn btn btn-primary text-light py-3 btn-block">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<!--NMD Login button main section -->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+</html>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- call main,js (PC) -->
+<script src="js/main.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
