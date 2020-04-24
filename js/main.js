@@ -33,7 +33,7 @@ function buildObservatoryThumbs() {
 	// iterate through observatories (PC)
 	for (let i = 0; i < observatories.length; i++) {
 		// declare htmlString var and add relevant html (PC)
-		let htmlString = "<a class='obsThumb' href='#" + observatories[i].name + "'>";
+		let htmlString = "<a class='obsThumb' href='#obs" + observatories[i].id + "'>";
 		htmlString += "<img src='" + observatories[i].thumb + "'/>";
 		htmlString += "<h1>" + observatories[i].name + "</h1>";
 		htmlString += "<h2>" + observatories[i].location + "</h2>";

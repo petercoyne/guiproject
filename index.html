@@ -84,7 +84,9 @@
 		<div class="container py-5">
 			<h1 class="h1">Observatories</h1>
 			<hr />
-			<h2 class="display-4 font-weight-bold mt-5">Palomar</h2>
+
+			<!-- Start observatory 0 -->
+			<h2 id="obspalomar" class="display-4 font-weight-bold mt-5">Palomar</h2>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
@@ -125,6 +127,96 @@
 					</div>
 				</div>
 			</div>
+			<!-- End observatory 0 -->
+
+			<!-- Start observatory 1 -->
+			<h2 id="obshobby" class="display-4 font-weight-bold mt-5">Hobby-Eberly</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
+					<table class="table table-hover">
+						<tr>
+							<td><img src="images/icon-location.svg"></td>
+							<td>33°21′23″N 116°51′54″W</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-altitude.svg"></td>
+							<td>1,712 m</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-calendar.svg"></td>
+							<td>Est. 1928</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-telescope.svg"></td>
+							<td>4 Telescopes</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
+					<p>Astronomer George Ellery Hale, whose vision created the Palomar Observatory, built the world's largest telescope four times in succession.</p>
+				</div>
+				<div class="col-lg-3 obsMapOrder">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<div class="addToCart p-3 mb-3">
+						<h6>Price per hour</h6>
+						<h3>€<span id="price1"></span></h3>
+						<hr/>
+						<div class="cartMid my-3">
+							<label for="range1">Hours: <span id="hoursHolder1">1</span> <span id="badge1" class="badge badge-success"></span></label>
+							<input type="range" class="custom-range" min="1" max="5" value="1" id="range1" oninput="setHours(1, this.value)">
+						</div>
+						<a data-obs-id="1" class="addToCartBtn btn btn-primary text-light py-3 btn-block">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+			<!-- End observatory 1 -->
+
+			<!-- Start observatory 2 -->
+			<h2 id="obskitt" class="display-4 font-weight-bold mt-5">Kitt Peak</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
+					<table class="table table-hover">
+						<tr>
+							<td><img src="images/icon-location.svg"></td>
+							<td>33°21′23″N 116°51′54″W</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-altitude.svg"></td>
+							<td>1,712 m</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-calendar.svg"></td>
+							<td>Est. 1928</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-telescope.svg"></td>
+							<td>4 Telescopes</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<p>Palomar Observatory is an astronomical observatory located in San Diego County, California, United States, 145 kilometers (90 mi) southeast of Los Angeles, California, in the Palomar Mountain Range. It is owned and operated by the California Institute of Technology (Caltech) located in Pasadena, California. Research time at the observatory is granted to Caltech and its research partners, which include the Jet Propulsion Laboratory (JPL) and Cornell University.</p>
+					<p>Astronomer George Ellery Hale, whose vision created the Palomar Observatory, built the world's largest telescope four times in succession.</p>
+				</div>
+				<div class="col-lg-3 obsMapOrder">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<div class="addToCart p-3 mb-3">
+						<h6>Price per hour</h6>
+						<h3>€<span id="price2"></span></h3>
+						<hr/>
+						<div class="cartMid my-3">
+							<label for="range2">Hours: <span id="hoursHolder2">1</span> <span id="badge2" class="badge badge-success"></span></label>
+							<input type="range" class="custom-range" min="1" max="5" value="1" id="range2" oninput="setHours(2, this.value)">
+						</div>
+						<a data-obs-id="2" class="addToCartBtn btn btn-primary text-light py-3 btn-block">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+			<!-- End observatory 2 -->
+
 		</div>
 	</div>
 
