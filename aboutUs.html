@@ -2,8 +2,36 @@
 
 <!doctype html>
 <html lang="en">
+
 <style>
-div {border: 1px solid red;}
+<!-- Template from https://codepen.io/blackjacques/pen/GrNMxv - image animations - NMD  -->
+<!-- NMD - Added animations to images and page. WIP leave here until ready to move to main css page. -->
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    height: 95%; 
+}
+
+#slide {
+    position: absolute;
+    left: -100%;
+    width: -100%;
+    height: -100%;
+    background: blue;
+    -webkit-animation: slide 0.1s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slide 0.5s forwards;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
 </style>
 
 <head>
@@ -65,33 +93,36 @@ div {border: 1px solid red;}
 				</div>
 			</div>
 		</nav>
-
-
+		
 		<!-- container for observatory thumbnails (PC) -->
 		<div class="container">
 			<h6 class="text-uppercase font-weight-light text-light"><span id="obsOnline"> </span> Observatories Online</h6>
 			<div id="obsThumbHolder" class="pb-5 text-light"></div>
 		</div>
 
+
 	</div> <!-- pane1 close -->
 	<!-- NMD - Edited to suit About us page -->
-	<div id="pane2">
+	<!-- NMD - Added animations to images and page -->
+	<div id="pane2" class="wrapper">
 		<div class="container py-5">
 			<h1 class="h1">About us</h1>
 			<hr />
 			<h2 class="display-3 font-weight-bold mt-5">Staff</h2>
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6 ">
 					<!-- NMD - Changed image form original to suit page -->
-					<img src="images/staffTeam.jpg" class="img-fluid rounded" alt="Staff team">
+					<!--<img src="images/staffTeam.jpg" class="img-fluid rounded slide" alt="Staff team"> -->
 					
-					<img src="images/percent100.jpg" class="img-fluid rounded" alt="certifications">
+					<img src="images/percent100.jpg" class="img-fluid rounded" id="slide" alt="certifications">
 					
 				</div>
 				<div class="col-lg-5 col-md-6 row" >
 				<!-- <h1 class="h1">Staff</h1>	-->
-					<p>insert text here</p>
-					<p>insert text here</p>
+					<!-- NMD - Added descriptions -->
+					<p><b>We here at Stelluminator works hard to allow anyone interested in the vast universe to see their snapshot of their choice.</p>
+					
+					<p><br><br><br><b>We have years of experience as trusted providers of such services, and are more than happy to provide you with any quotations or examples of work expected.</b></p>
 				
 				</div>
 	
@@ -100,16 +131,16 @@ div {border: 1px solid red;}
 	</div>
 	<!-- NMD - Added this div section  -->
 	<div id="pane2">
-		<div class="container py-5">
+		<div class="container py-5 wrapper">
 			<h1 class="display-4 font-weight-bold mt-5">Dedication to you.</h1>
 			
 			<div class="row">
 			
 				<div class="col-lg-4 col-md-6">
 					<!-- NMD - Changed image form original to suit page -->
-					<img src="images/businessmenInSuit.jpg" class="img-fluid rounded" alt="Business Meeting">
-					<br><br><br><br><br><br>
-					<img src="images/businessMeetingTable.jpg" class="img-fluid rounded" alt="certifications">
+					<img  id="slide" src="images/businessmenInSuit.jpg" class="img-fluid rounded" alt="Business Meeting">
+					<br><br><br><br><br><br><br><br><br><br><br><br>
+					<img  id="slide"src="images/businessMeetingTable.jpg" class="img-fluid rounded" alt="certifications">
 					
 					
 				</div>
@@ -118,7 +149,7 @@ div {border: 1px solid red;}
 					<p>We here at stelluminator wish to provide you with the best service possible. </p>
 					<p><br></p>
 					<p><br></p><p><br></p><p><br></p><p></p><p><br></p>
-					<p>testtext</p>
+					<p>We have a team of highly trained individuals ready during our working hours to provide you with any information you require.</p>
 
 				</div>
 				
