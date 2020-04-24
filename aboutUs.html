@@ -56,15 +56,16 @@ div {border: 1px solid red;}
 						</li>
 
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
+						<!-- ported code from index page to here (NMD) -->
+
 						<li class="nav-item">
-							<a id="navCart" class="nav-link" href="#pane3"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
+							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-	
 
 		<!-- container for observatory thumbnails (PC) -->
 		<div class="container">
@@ -124,6 +125,55 @@ div {border: 1px solid red;}
 			</div>
 		</div>
 	</div>
+	
+	
+	<!-- Modal https://getbootstrap.com/docs/4.4/components/modal/ (PC) -->
+	<!-- ported code from index page to here (NMD) -->
+
+	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title">Shopping Cart</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+		  <table class="table table-sm">
+			  <thead>
+				<tr>
+				  <th scope="col">Observatory</th>
+				  <th scope="col">Hours</th>
+				  <th scope="col">Cost</th>
+				  <th scope="col"></th>
+				</tr>
+			  </thead>
+			  <tbody id="cartContents"></tbody>
+			</table>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+			<button type="button" class="btn btn-primary">Checkout</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Toast https://getbootstrap.com/docs/4.4/components/toasts/ (PC) -->
+
+	  <div class="toast hide" data-delay="3500" style="position: fixed; bottom: 16px; right: 16px;">
+		<div class="toast-header">
+		  <strong class="mr-auto">Item Added</strong>
+		  <small>Just now</small>
+		  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="toast-body">
+		  Item has been added to cart! <a class="btn btn-success ml-3" href="#" data-toggle="modal" data-target="#cartModal">View cart</a>.
+		</div>
+	  </div>
 </body>
 
 </html>
