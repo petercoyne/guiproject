@@ -1,8 +1,12 @@
-// Declare observatories array (PC)
+// Declare empty observatories array (PC)
 let observatories = [];
+// Declare empty cart array (PC)
 let cart = [];
-
-//localStorage.setItem('user', JSON.stringify(person));
+// Initialise coupons array (PC)
+let coupons = [
+	["STELL10", 10],
+	["STELL25", 25]
+];
 
 // Call JQuery .ajax function to fetch array from observatories.json (PC)
 // https://api.jquery.com/jquery.ajax/
@@ -13,16 +17,20 @@ $.ajax({
 	success: function(data) {
 		// put resulting array into observatories variable (PC)
 		observatories = data;
-		console.log(observatories);
+		// Calculate number of observatories and place in first pane (PC)
 		setNumObservatoriesOnline();
+		// Create the observatory thumbnails for first pane (PC)
 		buildObservatoryThumbs();
+		// Read and set up shopping cart stuff (PC)
 		initCart();
+		// Place prices from observatories array into the price fields (PC)
 		populatePrices();
 	}
 });
 
-// iterate through observatories array and generate html for thumbnails (PC)
+// Generate html for thumbnails (PC)
 function buildObservatoryThumbs() {
+	// iterate through observatories (PC)
 	for (let i = 0; i < observatories.length; i++) {
 		// declare htmlString var and add relevant html (PC)
 		let htmlString = "<a class='obsThumb' href='#" + observatories[i].name + "'>";
@@ -36,91 +44,135 @@ function buildObservatoryThumbs() {
 	}
 }
 
+// Calculate number of observatories and place in first pane (PC)
 function setNumObservatoriesOnline() {
 	document.getElementById("obsOnline").innerHTML = observatories.length;
 }
 
+// Place prices from observatories array into the price fields (PC)
 function populatePrices() {
+	// iterate through observatories (PC)
 	for (let i = 0; i < observatories.length; i++) {
+		// Put price into relevant element id, e.g. #price0 for Palomar (PC)
 		document.getElementById("price" + i).innerHTML = observatories[i].price;
+		// Same for the initial badge state (PC)
 		document.getElementById("badge" + i).innerHTML = "€" + observatories[i].price;
-		observatories[i].cost = observatories[i].price; // initial cost = price
+		// initial cost = price (PC)
+		observatories[i].cost = observatories[i].price;
 	}
 }
 
-function setHours(observatory, hours){
+// This implements the slider functionality in the order box
+// It's called when the user changes the slider input (PC)
+function setHours(observatory, hours) {
+	// put new "hours" data into hoursHolder for observatory (PC)
     document.getElementById("hoursHolder" + observatory).innerHTML = hours;
+	// Calculate new cost (hours by price) (PC)
 	let cost = observatories[observatory].price * hours;
+	// Update hours badge with the new cost (PC)
 	document.getElementById("badge" + observatory).innerHTML = "€" + cost;
+	// Put the new hours and cost back into the observatories array (PC)
 	observatories[observatory].numHours = hours;
 	observatories[observatory].cost = cost;
 }
 
+// Read and set up shopping cart stuff (PC)
 function initCart() {
-	console.log("init cart");
+	// If there's a cart already in the local storage... (PC)
 	if (localStorage.cart) {
+		// put the storage into our live array (PC)
 		cartStorageToArray();
+		// update the cart icon badge in the nav bar (PC)
 		updateCartIcon();
+		// update the shopping cart modal with the existing entries (PC)
 		populateCartModal();
 	}
 }
 
+// update the cart icon badge in the nav bar (PC)
 function updateCartIcon() {
+	// if there's nothing in the cart (PC)
 	if (cart.length == 0) {
+		// remove the badge (PC)
 		document.getElementById("navBadge").innerHTML = "";
 	} else {
+		// else update the badge contents with the number of items in cart (PC)
 		document.getElementById("navBadge").innerHTML = cart.length;
 	}
 }
 
+// Place live array back into storage (PC)
 function cartArrayToStorage() {
 	localStorage.cart = JSON.stringify(cart);
 }
 
+// Place storage array into live array (PC)
 function cartStorageToArray() {
-	console.log("parsing storage");
 	cart = JSON.parse(localStorage.cart);
 }
 
+// Function to create the table of cart items (PC)
 function populateCartModal() {
+	// Wipe the cart contents, if it exists (Jquery syntax) (PC)
 	$("#cartContents").html("");
+	// Start counters for totals (PC)
 	let hoursTotal = 0;
 	let costTotal = 0;
+	// Iterate through cart items (PC)
 	for (let i = 0; i < cart.length; i++) {
+		// First column in 2d cart array is the observatory ID (PC)
 		let obsID = cart[i][0];
+		// Second column is the number of hours (PC)
 		let obsHours = cart[i][1];
+		// Third is the cost of the item (PC)
 		let obsCost = cart[i][2];
+		// Add these to total counters (PC)
 		hoursTotal += Number(obsHours);
 		costTotal += obsCost;
-		$("#cartContents").append("<tr>");
-		$("#cartContents").append("<td>" + observatories[obsID].name + "</td>");
-		$("#cartContents").append("<td>" + obsHours + "</td>");
-		$("#cartContents").append("<td>€" + obsCost + "</td>");
-		$("#cartContents").append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>X</button></td>");
-		$("#cartContents").append("</tr>");
+		// Build a row with id of cartItem0 etc (PC)
+		$("#cartContents").append("<tr id='cartItem" + i + "'>");
+		// add table data cells with item details (PC)
+		$("#cartItem" + i).append("<td>" + observatories[obsID].name + "</td>");
+		$("#cartItem" + i).append("<td>" + obsHours + "</td>");
+		$("#cartItem" + i).append("<td>€" + obsCost + "</td>");
+		// Create a reference to delete handler on this cart item (PC)
+		$("#cartItem" + i).append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>X</button></td>");
 	}
-	$("#cartContents").append("<tr class='table-active'>");
-	$("#cartContents").append("<td>Total</td>");
-	$("#cartContents").append("<td>" + hoursTotal + "</td>");
-	$("#cartContents").append("<td>€" + costTotal + "</td>");
-	$("#cartContents").append("<td></td>");
-	$("#cartContents").append("</tr>");
-	console.log("finishing cart total");
+	// Build row for totals (PC)
+	$("#cartContents").append("<tr id='cartTotal' class='table-active'>");
+	// Add total figure cells (PC)
+	$("#cartTotal").append("<td>Total</td>");
+	$("#cartTotal").append("<td>" + hoursTotal + "</td>");
+	$("#cartTotal").append("<td>€" + costTotal + "</td>");
+	$("#cartTotal").append("<td></td>");
 }
 
+// Remove cart item with id of cartID (PC)
 function deleteCartItem(cartID) {
+	// Splice out the item from the live array (PC)
 	cart.splice(cartID, 1);
+	// Copy array back into local storage (PC)
 	cartArrayToStorage();
+	// update the cart icon badge in the nav bar (PC)
 	updateCartIcon();
+	// Update the cart table in the modal (PC)
 	populateCartModal();
 }
 
+// Jquery event listener for "add to cart" button click (PC)
 $(".addToCartBtn").click(function() {
+	// Get the ID of the observatory from the html attribute of the button. Magic! (PC)
 	let obsID = this.getAttribute("data-obs-id");
+	// Push array to 2d cart array: observatory ID, number of hours requested, cost of item (PC)
 	cart.push([obsID, observatories[obsID].numHours, observatories[obsID].cost]);
+	// Update the cart icon in the nav bar (PC)
 	updateCartIcon();
+	// Update the actual cart displayed in the modal (PC)
 	populateCartModal();
+	// Copy our live array back to storage (PC)
 	cartArrayToStorage();
+	// Show the "Added to cart" toast, https://getbootstrap.com/docs/4.4/components/toasts/ (PC)
+	$('.toast').toast('show');
 });
 
 // -------- navbar effects on scroll (PC) adapted from: --------

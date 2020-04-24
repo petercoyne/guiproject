@@ -55,7 +55,7 @@
 
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
 						<li class="nav-item">
-							<a id="navCart" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
+							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -158,6 +158,21 @@
 		</div>
 	  </div>
 	</div>
+
+	<!-- Toast https://getbootstrap.com/docs/4.4/components/toasts/ (PC) -->
+
+	  <div class="toast hide" data-delay="3500" style="position: fixed; bottom: 16px; right: 16px;">
+		<div class="toast-header">
+		  <strong class="mr-auto">Item Added</strong>
+		  <small>Just now</small>
+		  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="toast-body">
+		  Item has been added to cart! <a class="btn btn-success ml-3" href="#" data-toggle="modal" data-target="#cartModal">View cart</a>.
+		</div>
+	  </div>
 
 
 </body>
