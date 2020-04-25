@@ -136,7 +136,7 @@ function populateCartModal() {
 		$("#cartItem" + i).append("<td>" + obsHours + "</td>");
 		$("#cartItem" + i).append("<td>€" + obsCost + "</td>");
 		// Create a reference to delete handler on this cart item (PC)
-		$("#cartItem" + i).append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>X</button></td>");
+		$("#cartItem" + i).append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>&times;</button></td>");
 	}
 	// Build row for totals (PC)
 	$("#cartContents").append("<tr id='cartTotal' class='table-active'>");
@@ -172,7 +172,7 @@ $(".addToCartBtn").click(function() {
 	// Copy our live array back to storage (PC)
 	cartArrayToStorage();
 	// Show the "Added to cart" toast, https://getbootstrap.com/docs/4.4/components/toasts/ (PC)
-	$('.toast').toast('show');
+	$("#addToCartToast").toast("show");
 });
 
 // -------- navbar effects on scroll (PC) adapted from: --------
