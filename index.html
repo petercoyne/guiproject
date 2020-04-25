@@ -49,8 +49,12 @@
 						<!--NMD Added main link to about us page -->
 							<a class="nav-link" href="aboutUs.html">About Us</a>
 						</li>
+						<!--NMD Added login link -->
 						<li class="nav-item" id="navLogin">
-							<a class="nav-link" href="#pane3">Login</a>
+							<a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#pane3">Login</a>
+						</li>
+						<li class="nav-item" id="navAccount">
+							<a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">My Account</a>
 						</li>
 
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
@@ -232,8 +236,9 @@
 		</div>
 	</div>
 
-	<!-- Modal https://getbootstrap.com/docs/4.4/components/modal/ (PC) -->
-	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- Shopping Cart Modal https://getbootstrap.com/docs/4.4/components/modal/ (PC) -->
+
+	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -263,21 +268,106 @@
 	  </div>
 	</div>
 
-	<!-- Toast https://getbootstrap.com/docs/4.4/components/toasts/ (PC) -->
 
-	  <div class="toast hide" data-delay="3500" style="position: fixed; bottom: 16px; right: 16px;">
+	<!-- Toast for cart added item https://getbootstrap.com/docs/4.4/components/toasts/ (PC) -->
+
+	<div class="toast hide" data-delay="3500" style="position: fixed; bottom: 16px; right: 16px;">
 		<div class="toast-header">
-		  <strong class="mr-auto">Item Added</strong>
-		  <small>Just now</small>
-		  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
+			<strong class="mr-auto">Item Added</strong>
+			<small>Just now</small>
+			<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
 		</div>
 		<div class="toast-body">
-		  Item has been added to cart! <a class="btn btn-success ml-3" href="#" data-toggle="modal" data-target="#cartModal">View cart</a>.
+			Item has been added to cart! <a class="btn btn-success ml-3" href="#" data-toggle="modal" data-target="#cartModal">View cart</a>.
 		</div>
-	  </div>
+	</div>
 
+
+	<!--NMD Login button main section -->
+	<div id="id01" class="loginstuffmodal loginstuff">
+
+		<!-- https://www.w3schools.com/js/js_validation.asp -->
+		<form class="modal-content animate" onsubmit="return login()">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<img src="img_avatar2.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+				<button type="submit">Login</button>
+				<div id="invalidUsername" class="alert alert-danger text-center" role="alert">
+					Invalid Username!
+				</div>
+				<div id="invalidPassword" class="alert alert-danger text-center" role="alert">
+					Invalid Password!
+				</div>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				<span class="psw"><a href="#">Forgot password?</a></span>
+			</div>
+		</form>
+	</div>
+
+
+	<!-- account details modal -->
+
+	<div id="accountModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Welcome, <span id="userNameHolder"></span></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table class="table" id="accDetails">
+						<tr>
+							<td>First Name</td>
+							<td><input type="text" class="form-control" id="userFirstName"></td>
+						</tr>
+						<tr>
+							<td>Last Name</td>
+							<td><input type="text" class="form-control" id="userLastName"></td>
+						</tr>
+						<tr>
+							<td>Address 1</td>
+							<td><input type="text" class="form-control" id="userAddress1"></td>
+						</tr>
+						<tr>
+							<td>Address 2</td>
+							<td><input type="text" class="form-control" id="userAddress2"></td>
+						</tr>
+						<tr>
+							<td>Address 3</td>
+							<td><input type="text" class="form-control" id="userAddress3"></td>
+						</tr>
+						<tr>
+							<td>Phone Number</td>
+							<td><input type="text" class="form-control" id="userPhone"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger mr-auto" href="#" onclick="logout()">Logout</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" onclick="saveAccountData()">Save Changes</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 </body>
 
@@ -289,5 +379,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<!-- call main,js (PC) -->
+<!-- call main.js & login.js (PC) -->
 <script src="js/main.js"></script>
+<script src="js/login.js"></script>

@@ -1,0 +1,22 @@
+[
+  {
+	"username": "mike",
+	"firstname": "Michael",
+	"lastname": "Duignan",
+    "password": "mypass1",
+    "address1": "GMIT",
+    "address2": "Dublin Road",
+	"address3": "Galway",
+	"phone": "087 555 2396"
+  },
+  {
+	"username": "pete",
+	"firstname": "Peter",
+	"lastname": "Coyne",
+    "password": "123",
+    "address1": "Montrose House",
+    "address2": "Whitestrand Park",
+	"address3": "Galway",
+	"phone": "085 123 4567"
+  }
+]
