@@ -159,6 +159,14 @@ iframe {
 	display: none;
 }
 
+#footer {
+	color: lightgrey;
+	background-image: url("../images/bg-footer.jpg");
+	background-size: cover;
+	background-position: center;
+	box-shadow: inset 0 16px 24px #000000;
+}
+
 
 
 /* NMD Login button template: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal */

@@ -10,9 +10,15 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+	<!-- Main stylesheet and "Inter" font (PC) -->
 	<link rel="stylesheet" href="styles/styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
 
+	<!-- include Animate On Scroll library https://michalsnik.github.io/aos/ (PC) -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!-- created favicon from logo (PC) -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<title>Stellumina</title>
@@ -30,6 +36,7 @@
 		<!-- navbar adapted from https://getbootstrap.com/docs/4.4/components/navbar/ (PC) -->
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
+				<!-- Custom logo (PC) -->
 				<a class="navbar-brand" href="#pane1"><img src="images/logo.svg" class="mr-3" />stellumina</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNavbar" aria-controls="theNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +60,13 @@
 						<li class="nav-item" id="navLogin">
 							<a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#pane3">Login</a>
 						</li>
+						<!-- My Account, hidden by default, triggers #accountModal (PC) -->
 						<li class="nav-item hide" id="navAccount">
 							<a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">My Account</a>
 						</li>
 
-						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ (PC) -->
+						<!-- Link to trigger cart modal. Cart icon from "Font Awesome" converted to svg (PC) -->
+						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ updates via javascript when cart is modified (PC) -->
 						<li class="nav-item">
 							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
 						</li>
@@ -67,19 +76,20 @@
 		</nav>
 
 		<!-- jumbotron adapted from https://getbootstrap.com/docs/4.4/components/jumbotron/ (PC) -->
+		<!-- uses data-aos and data-aos-duration to animate in via AOS Library (PC) -->
 		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
 			<div class="container">
-				<h1 class="h1 py-3">Astro-imaging, <span class="lightblue">democratised.</span></h1>
-				<p class="lead pb-5 text-muted">Stellumina makes advanced astrophotography affordable for hobbyists.</p>
-				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3">Browse Observatories</a>
-				<a class="btn btn-primary px-5 py-3 mb-3">Learn More</a>
+				<h1 class="h1 py-3" data-aos="fade-left" data-aos-duration="500">Astro-imaging, <span class="lightblue">democratised.</span></h1>
+				<p class="lead pb-5 text-muted" data-aos="fade-left" data-aos-duration="700">Stellumina makes advanced astrophotography affordable for hobbyists.</p>
+				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3" data-aos="fade-left" data-aos-duration="1000">Browse Observatories</a>
+				<a class="btn btn-primary px-5 py-3 mb-3" data-aos="fade-left" data-aos-duration="1200">Learn More</a>
 			</div>
 		</div>
 
-		<!-- container for observatory thumbnails (PC) -->
+		<!-- container for observatory thumbnails, gets populated by javascript on main.js:32 (PC) -->
 		<div class="container">
 			<h6 class="text-uppercase font-weight-light text-light"><span id="obsOnline"> </span> Observatories Online</h6>
-			<div id="obsThumbHolder" class="pb-5 text-light"></div>
+			<div id="obsThumbHolder" class="pb-5 text-light" data-aos="fade-up" data-aos-duration="1200"></div>
 		</div>
 
 	</div> <!-- pane1 close -->
@@ -89,17 +99,41 @@
 			<h1 class="h1">Observatories</h1>
 			<hr />
 
-			<!-- Start observatory 0 -->
+			<!-- Start observatory 0 (PC) -->
 			<h2 id="obspalomar" class="display-4 font-weight-bold mt-5">Palomar</h2>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
-					<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
+
+
+					<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
+							</div>
+							<div class="carousel-item">
+								<img src="images/full-palomar2.jpg" class="img-fluid rounded" alt="Palomar Observatory">
+							</div>
+							<div class="carousel-item">
+								<img src="images/full-palomar3.jpg" class="img-fluid rounded" alt="Hale Telescope 2">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+
+
 					<table class="table table-hover">
 						<tr>
 							<!-- Edited information for specific telescope (NMD) -->
-
 							<td><img src="images/icon-location.svg"></td>
-							<td>33°21′23″N 116°51′54″W</td>
+							<td>33°21′23″N, 116°51′54″W</td>
 						</tr>
 						<tr>
 							<td><img src="images/icon-altitude.svg"></td>
@@ -120,15 +154,19 @@
 					<p>Astronomer George Ellery Hale, whose vision created the Palomar Observatory, built the world's largest telescope four times in succession.</p>
 				</div>
 				<div class="col-lg-3 obsMapOrder">
+					<!-- Embedded map from google maps, tweaked width/height and added margin-bottom (PC) -->
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<!-- Custom "add to cart" box (PC) -->
 					<div class="addToCart p-3 mb-3">
 						<h6>Price per hour</h6>
 						<h3>€<span id="price0"></span></h3>
 						<hr/>
 						<div class="cartMid my-3">
+							<!-- range input with telescope id as suffix, triggers js on input change (PC) -->
 							<label for="range0">Hours: <span id="hoursHolder0">1</span> <span id="badge0" class="badge badge-success"></span></label>
 							<input type="range" class="custom-range" min="1" max="5" value="1" id="range0" oninput="setHours(0, this.value)">
 						</div>
+						<!-- custom attribute data-obs-id to hand to javascript listener (PC) -->
 						<a data-obs-id="0" class="addToCartBtn btn btn-primary text-light py-3 btn-block">Add to Cart</a>
 					</div>
 				</div>
@@ -141,7 +179,7 @@
 				<div class="col-lg-4 col-md-6">
 				<!-- Changed image from Palomar to Hobby Eberly (NMD)-->
 
-					<img src="images/hobbyEberly.jpg" class="img-fluid rounded" alt="Hobby Eberly pic">
+					<img src="images/full-hobbyeberly.jpg" class="img-fluid rounded" alt="Hobby Eberly pic">
 					<table class="table table-hover">
 						<tr>
 							<td><img src="images/icon-location.svg"></td>
@@ -163,13 +201,13 @@
 				</div>
 				<div class="col-lg-5 col-md-6">
 					<!-- Hobby eberbly telescope description from https://en.wikipedia.org/wiki/Hobby%E2%80%93Eberly_Telescope (NMD) -->
-					<p>The Hobby–Eberly Telescope (HET) is a 10-meter (30-foot) aperture telescope located at the McDonald Observatory in Davis Mountains, Texas.
+					<p>The Hobby–Eberly Telescope (HET) is a 10-meter (30-foot) aperture telescope located at the McDonald Observatory in Davis Mountains, Texas.</p>
 
-						The Hobby–Eberly Telescope is one of the largest optical telescopes in the world and combines a number of features that differentiate it from most telescope designs, resulting in greatly lowered construction costs. For instance, the primary mirror is constructed from 91 hexagonal segments, which is less expensive than manufacturing a single large primary. Furthermore, the telescope's main mirror is fixed at a 55° angle and can rotate around its base. A target is tracked by moving the instruments at the focus of the telescope; this provides access to about 70–81% of the sky at its location and allows a single target to be tracked for up to two hours.[1][2] The telescope is named for former Texas Lieutenant-Governor Bill Hobby and for Robert E. Eberly, a Penn State benefactor. .</p>
+					<p>The Hobby–Eberly Telescope is one of the largest optical telescopes in the world and combines a number of features that differentiate it from most telescope designs, resulting in greatly lowered construction costs. For instance, the primary mirror is constructed from 91 hexagonal segments, which is less expensive than manufacturing a single large primary. Furthermore, the telescope's main mirror is fixed at a 55° angle and can rotate around its base. A target is tracked by moving the instruments at the focus of the telescope; this provides access to about 70–81% of the sky at its location and allows a single target to be tracked for up to two hours. The telescope is named for former Texas Lieutenant-Governor Bill Hobby and for Robert E. Eberly, a Penn State benefactor.</p>
 					
 				</div>
 				<div class="col-lg-3 obsMapOrder">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28109336.559339!2d-121.93555652476546!3d30.681398100000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x44ccfcdab4738d64!2sHobby%E2%80%93Eberly%20Telescope!5e0!3m2!1sen!2sie!4v1587999059826!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" mb-3></iframe>
 					<div class="addToCart p-3 mb-3">
 						<h6>Price per hour</h6>
 						<h3>€<span id="price1"></span></h3>
@@ -211,14 +249,14 @@
 					</table>
 				</div>
 				<div class="col-lg-5 col-md-6">
-					<p>The Kitt Peak National Observatory (KPNO) is a United States astronomical observatory located on Kitt Peak of the Quinlan Mountains in the Arizona-Sonoran Desert on the Tohono O'odham Nation, 88 kilometers (55 mi) west-southwest of Tucson, Arizona. With over twenty optical and two radio telescopes, it is one of the largest gatherings of astronomical instruments in the northern hemisphere.[1]
+					<p>The Kitt Peak National Observatory (KPNO) is a United States astronomical observatory located on Kitt Peak of the Quinlan Mountains in the Arizona-Sonoran Desert on the Tohono O'odham Nation, 88 kilometers (55 mi) west-southwest of Tucson, Arizona. With over twenty optical and two radio telescopes, it is one of the largest gatherings of astronomical instruments in the northern hemisphere.</p>
 
-					Kitt Peak National Observatory was founded in 1958.[2] It was home to what was the largest solar telescope in the world, and many large astronomical telescopes of the late 20th century in the United States.[2]
+					<p>Kitt Peak National Observatory was founded in 1958. It was home to what was the largest solar telescope in the world, and many large astronomical telescopes of the late 20th century in the United States.</p>
 
-					The observatory was administered by the National Optical Astronomy Observatory (NOAO) from the early 1980s until 2019, after which it was overseen by the National Optical-Infrared Astronomy Research Laboratory.[3] </p>
+					<p>The observatory was administered by the National Optical Astronomy Observatory (NOAO) from the early 1980s until 2019, after which it was overseen by the National Optical-Infrared Astronomy Research Laboratory.</p>
 				</div>
 				<div class="col-lg-3 obsMapOrder">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49654738.150232494!2d-124.23458335312696!3d29.312040916662482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db96e7d65e3475%3A0x9602e5fc88fa56e6!2sPalomar%20Observatory!5e0!3m2!1sen!2sie!4v1586174603373!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27730224.014779404!2d-129.52068072476538!3d31.95988990000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa92aad5221dcf9de!2sKitt%20Peak%20National%20Observatory!5e0!3m2!1sen!2sie!4v1587999184605!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" mb-3></iframe>
 					<div class="addToCart p-3 mb-3">
 						<h6>Price per hour</h6>
 						<h3>€<span id="price2"></span></h3>
@@ -233,6 +271,14 @@
 			</div>
 			<!-- End observatory 2 -->
 
+		</div>
+	</div>
+
+	<!-- Simple footer (PC) -->
+	<div id="footer">
+		<div class="container py-5 text-center">
+			<img src="images/logo.svg" class="mb-3"/>
+			<p><small>&copy; 2020 Stellumina</small></p>
 		</div>
 	</div>
 
@@ -365,7 +411,7 @@
 	</div>
 
 
-	<!-- account details modal -->
+	<!-- account details modal (PC) -->
 
 	<div id="accountModal" class="modal fade" tabindex="-1" role="dialog">
 		<div class="modal-dialog modal-lg" role="document">
@@ -410,7 +456,6 @@
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-success" onclick="saveAccountData()">Save Changes</button>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -428,3 +473,5 @@
 <!-- call main.js & login.js (PC) -->
 <script src="js/main.js"></script>
 <script src="js/login.js"></script>
+<!-- init Animate On Scroll (PC) -->
+<script>AOS.init();</script>
