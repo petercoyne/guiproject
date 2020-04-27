@@ -281,3 +281,7 @@ iframe {
      width: 100%;
   }
 }
+
+#aboutus1, #aboutus2 {
+	background-color: white;
+}
