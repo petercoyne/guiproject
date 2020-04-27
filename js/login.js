@@ -83,6 +83,8 @@ function login() {
 			if (users[key].password == password) {
 				// Trigger login success function (PC)
 				loginSuccess(key);
+				// Prevent the submit button from triggering a reload (PC)
+				return false;
 			} else {
 				// Otherwise display "invalid password" warning (PC)
 				$("#invalidPassword").show();

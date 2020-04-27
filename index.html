@@ -54,18 +54,18 @@
 						</li>
 						<li class="nav-item">
 						<!--NMD Added main link to about us page -->
-							<a class="nav-link" href="aboutUs.html">About Us</a>
+							<a class="nav-link" href="#pane3">About Us</a>
 						</li>
 						<!--NMD Added login link -->
 						<li class="nav-item" id="navLogin">
-							<a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#pane3">Login</a>
+							<a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#">Login</a>
 						</li>
 						<!-- My Account, hidden by default, triggers #accountModal (PC) -->
 						<li class="nav-item hide" id="navAccount">
 							<a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">My Account</a>
 						</li>
 
-						<!-- Link to trigger cart modal. Cart icon from "Font Awesome" converted to svg (PC) -->
+						<!-- Link triggers cart modal. Cart icon from "Font Awesome" converted to svg (PC) -->
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ updates via javascript when cart is modified (PC) -->
 						<li class="nav-item">
 							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
@@ -79,7 +79,7 @@
 		<!-- uses data-aos and data-aos-duration to animate in via AOS Library (PC) -->
 		<div id="homeJumbo" class="jumbotron jumbotron-fluid transparent-bg text-light">
 			<div class="container">
-				<h1 class="h1 py-3" data-aos="fade-left" data-aos-duration="500">Astro-imaging, <span class="lightblue">democratised.</span></h1>
+				<h1 id="mainh1" class="h1 py-3" data-aos="fade-left" data-aos-duration="500">Astro-imaging, <span class="lightblue">democratised.</span></h1>
 				<p class="lead pb-5 text-muted" data-aos="fade-left" data-aos-duration="700">Stellumina makes advanced astrophotography affordable for hobbyists.</p>
 				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3" data-aos="fade-left" data-aos-duration="1000">Browse Observatories</a>
 				<a class="btn btn-primary px-5 py-3 mb-3" data-aos="fade-left" data-aos-duration="1200">Learn More</a>
@@ -102,10 +102,10 @@
 			<!-- Start observatory 0 (PC) -->
 			<h2 id="obspalomar" class="display-4 font-weight-bold mt-5">Palomar</h2>
 			<div class="row">
+			<!-- Use bootstrap grid cols (PC) -->
 				<div class="col-lg-4 col-md-6">
-
-
-					<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+					<!-- crossfade carousel modified from https://getbootstrap.com/docs/4.4/components/carousel/ (PC) -->
+					<div id="carousel0fade" class="carousel slide carousel-fade" data-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="images/full-palomar.jpg" class="img-fluid rounded" alt="Hale Telescope">
@@ -127,8 +127,7 @@
 						</a>
 					</div>
 
-
-
+					<!-- stats table with icons from font awesome (PC) -->
 					<table class="table table-hover">
 						<tr>
 							<!-- Edited information for specific telescope (NMD) -->
@@ -172,7 +171,7 @@
 				</div>
 			</div>
 			<!-- End observatory 0 -->
-
+			<hr/>
 			<!-- Start observatory 1 -->
 			<h2 id="obshobby" class="display-4 font-weight-bold mt-5">Hobby-Eberly</h2>
 			<div class="row">
@@ -221,13 +220,13 @@
 				</div>
 			</div>
 			<!-- End observatory 1 -->
-
+			<hr/>
 			<!-- Start observatory 2 -->
 			<h2 id="obskitt" class="display-4 font-weight-bold mt-5">Kitt Peak</h2>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<!-- Changed image from Palomar to Kitt peak (NMD)-->
-					<img src="images/kittPeak.jpg" class="img-fluid rounded" alt="Kitt peak pic">
+					<img src="images/KittPeak.jpg" class="img-fluid rounded" alt="Kitt peak pic">
 					<table class="table table-hover">
 						<tr>
 							<!-- Changed information from Palomar to Kitt Peak (NMD)-->
@@ -272,12 +271,111 @@
 			<!-- End observatory 2 -->
 
 		</div>
+	</div> <!-- pane2 close -->
+
+	<div id="pane3">
+		<div id="aboutus1" class="wrapper">
+			<div class="container pt-5">
+				<h1 class="h1 mt-5">About us</h1>
+				<hr />
+				<h2 class="display-3 font-weight-bold mt-5">Staff</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 ">
+						<!-- NMD - Added carousel to page -->
+						<!-- NMD - Code adapted from https://getbootstrap.com/docs/4.0/components/carousel/ -->
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						  <ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						  </ol>
+						  <div class="carousel-inner">
+							<div class="carousel-item active">
+							  <img class="d-block w-100" src="images/percent100.jpg" alt="First slide">
+							</div>
+							<div class="carousel-item">
+							  <img class="d-block w-100" src="images/businessmenInSuit.jpg" alt="Second slide">
+							</div>
+							<div class="carousel-item">
+							  <img class="d-block w-100" src=" images/businessMeetingTable.jpg" alt="Third slide">
+							</div>
+						  </div>
+						  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-6 row" >
+					<!-- <h1 class="h1">Staff</h1>	-->
+						<!-- NMD - Added descriptions -->
+						<p><b>We here at Stelluminator works hard to allow anyone interested in the vast universe to see their snapshot of their choice.</p>
+
+						<p><br><br><b>We have years of experience as trusted providers of such services, and are more than happy to provide you with any quotations or examples of work expected.</b></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- NMD - Added this div section  -->
+		<div id="aboutus2">
+			<div class="container pt-3 wrapper">
+				<h1 class="display-4 font-weight-bold mt-5">Dedication to you.</h1>
+
+				<div class="row">
+
+					<div class="col-lg-4 col-md-6">
+						<!-- NMD - Added 2nd carousel for page -->
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						  <ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						  </ol>
+						  <div class="carousel-inner">
+							<div class="carousel-item active">
+							  <img class="d-block w-100" src="images/analytic image.jpg" alt="First slide">
+							</div>
+							<div class="carousel-item">
+							  <img class="d-block w-100" src="images/Business work.jpeg" alt="Second slide">
+							</div>
+							<div class="carousel-item">
+							  <img class="d-block w-100" src=" images/Pen books .jpeg" alt="Third slide">
+							</div>
+						  </div>
+						  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</div>
+
+
+					</div>
+					<div class="col-lg-5 col-md-6" class="row" >
+					<!-- <h1 class="h1">Staff</h1>	-->
+						<p>We here at stelluminator wish to provide you with the best service possible. </p>
+						<p><br></p>
+						<p><br></p><p><br></p><p><br></p><p></p><p><br></p>
+						<p>We have a team of highly trained individuals ready during our working hours to provide you with any information you require.</p>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Simple footer (PC) -->
 	<div id="footer">
 		<div class="container py-5 text-center">
-			<img src="images/logo.svg" class="mb-3"/>
+			<img src="images/logo.svg" class="my-3"/>
 			<p><small>&copy; 2020 Stellumina</small></p>
 		</div>
 	</div>
@@ -303,6 +401,7 @@
 				  <th scope="col"></th>
 				</tr>
 			  </thead>
+			  <!-- populate using main.js:115 (PC) -->
 			  <tbody id="cartContents"></tbody>
 			</table>
 		  </div>

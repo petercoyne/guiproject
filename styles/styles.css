@@ -38,6 +38,7 @@ body {
 /* -------- Nav Bar -------- */
 	/* Navbar bg colour transition (PC) */
 	nav {
+		z-index: 3;
 		transition: background-color 0.3s;
 	}
 	/* Navbar bg colour and bg blur (PC) */
@@ -96,6 +97,10 @@ body {
 	background-size: cover;
 }
 
+#mainh1 {
+/*	font-weight: 600; */
+}
+
 /* Observatory thumbnails for pane 1 (PC) */
 	/* Basic positioning for thumb blocks (PC) */
 	.obsThumb {
@@ -134,33 +139,39 @@ body {
 		border: 2px solid white;
 	}
 
+/* pane 2 background colour for homepage (PC) */
 #pane2 {
 	background-color: white;
-	min-height: 100vh;
 }
 
+/* Styling for the "add to cart" section on each observatory (PC) */
 .addToCart {
 	background-color: #FCFCFC;
 	border-radius: 16px;
 	border: 1px solid #EEE;
 }
 
+/* curve the maps embed on supported browsers (PC) */
 iframe {
 	border-radius: 16px;
 }
 
+/* hide the map on width <992px (PC) */
 @media (max-width: 991px) {
     .obsMapOrder iframe {
         display: none;
 	}
 }
 
+/* Hide these divs by default (PC) */
 #invalidPassword, #invalidUsername, #navAccount {
 	display: none;
 }
 
+/* Minimal site footer with custom background and inset shadow (PC) */
 #footer {
 	color: lightgrey;
+	/* Modified from https://unsplash.com/photos/E0AHdsENmDg (PC) */
 	background-image: url("../images/bg-footer.jpg");
 	background-size: cover;
 	background-position: center;
@@ -228,7 +239,7 @@ iframe {
 .loginstuffmodal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 4; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -290,6 +301,7 @@ iframe {
   }
 }
 
-#aboutus1, #aboutus2 {
-	background-color: white;
+#pane3 {
+	background-color: #EBEBEB;
+	background-image: url(../images/bg-aboutus.jpg);
 }
