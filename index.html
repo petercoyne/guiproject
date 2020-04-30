@@ -37,7 +37,7 @@
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
 				<!-- Custom logo (PC) -->
-				<a class="navbar-brand" href="#pane1"><img src="images/logo.svg" class="mr-3" />stellumina</a>
+				<a class="navbar-brand" href="#pane1"><img src="images/logo.svg" alt="Stellumina" class="mr-3" />stellumina</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNavbar" aria-controls="theNavbar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
 							<a class="nav-link" href="#pane2">Observatories</a>
 						</li>
 						<li class="nav-item">
-						<!--NMD Added main link to about us page -->
+							<!--NMD Added main link to about us page -->
 							<a class="nav-link" href="#pane3">About Us</a>
 						</li>
 						<!--NMD Added login link -->
@@ -69,7 +69,7 @@
 						<!-- Link triggers cart modal. Cart icon from "Font Awesome" converted to svg (PC) -->
 						<!-- navbar badge code from https://getbootstrap.com/docs/4.4/components/badge/ updates via javascript when cart is modified (PC) -->
 						<li class="nav-item">
-							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
+							<a id="navCart" href="#" class="nav-link" data-toggle="modal" data-target="#cartModal"><img src="images/icon-cart.svg" alt="Cart"><span id="navBadge" class="badge badge-pill badge-danger"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -87,7 +87,7 @@
 			</div>
 		</div>
 
-		<!-- container for observatory thumbnails, gets populated by javascript on main.js:32 (PC) -->
+		<!-- container for observatory thumbnails, gets populated by javascript in main.js (PC) -->
 		<div class="container">
 			<h6 class="text-uppercase font-weight-light text-light"><span id="obsOnline"> </span> Observatories Online</h6>
 			<div id="obsThumbHolder" class="pb-5 text-light" data-aos="fade-up" data-aos-duration="1200"></div>
@@ -132,19 +132,19 @@
 					<table class="table table-hover">
 						<tr>
 							<!-- Edited information for specific telescope (NMD) -->
-							<td><img src="images/icon-location.svg"></td>
+							<td><img src="images/icon-location.svg" alt="Location"></td>
 							<td>33°21′23″N, 116°51′54″W</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-altitude.svg"></td>
+							<td><img src="images/icon-altitude.svg" alt="Altitude"></td>
 							<td>1,712 m</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-calendar.svg"></td>
+							<td><img src="images/icon-calendar.svg" alt="Established"></td>
 							<td>Est. 1928</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-telescope.svg"></td>
+							<td><img src="images/icon-telescope.svg" alt="Telescopes"></td>
 							<td>4 Telescopes</td>
 						</tr>
 					</table>
@@ -182,19 +182,19 @@
 					<img src="images/full-hobbyeberly.jpg" class="img-fluid rounded" alt="Hobby Eberly pic">
 					<table class="table table-hover">
 						<tr>
-							<td><img src="images/icon-location.svg"></td>
+							<td><img src="images/icon-location.svg" alt="Location"></td>
 							<td>30.6814° N, 104.0146° W</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-altitude.svg"></td>
+							<td><img src="images/icon-altitude.svg" alt="Altitude"></td>
 							<td>10 m</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-calendar.svg"></td>
+							<td><img src="images/icon-calendar.svg" alt="Established"></td>
 							<td>Est. 1996</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-telescope.svg"></td>
+							<td><img src="images/icon-telescope.svg" alt="Telescopes"></td>
 							<td>1 Telescope</td>
 						</tr>
 					</table>
@@ -231,19 +231,19 @@
 					<table class="table table-hover">
 						<tr>
 							<!-- Changed information from Palomar to Kitt Peak (NMD)-->
-							<td><img src="images/icon-location.svg"></td>
+							<td><img src="images/icon-location.svg" alt="Location"></td>
 							<td>31.9599° N, 111.5997° W</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-altitude.svg"></td>
+							<td><img src="images/icon-altitude.svg" alt="Altitude"></td>
 							<td>2,099 m</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-calendar.svg"></td>
+							<td><img src="images/icon-calendar.svg" alt="Established"></td>
 							<td>Est. 1928</td>
 						</tr>
 						<tr>
-							<td><img src="images/icon-telescope.svg"></td>
+							<td><img src="images/icon-telescope.svg" alt="Telescopes"></td>
 							<td>22 Telescopes</td>
 						</tr>
 					</table>
@@ -376,7 +376,7 @@
 	<!-- Simple footer (PC) -->
 	<div id="footer">
 		<div class="container py-5 text-center">
-			<img src="images/logo.svg" class="my-3"/>
+			<img src="images/logo.svg" alt="Stellumina" class="my-3"/>
 			<p><small>&copy; 2020 Stellumina</small></p>
 		</div>
 	</div>
@@ -407,7 +407,7 @@
 			</table>
 			<p id="couponDetailsHolder"></p>
 			<div id="invalidCoupon" class="alert alert-danger text-center hidden" role="alert">Invalid Code</div>
-			<p class="text-right mt-3"><input type="text" id="couponInput" placeholder="Coupon Code"> <button role="button" class="btn btn-success btn-sm text-light" onclick="addCoupon()">Apply Code</button></p>
+			<p class="text-right mt-3"><input type="text" id="couponInput" placeholder="Coupon Code"> <button class="btn btn-success btn-sm text-light" onclick="addCoupon()">Apply Code</button></p>
 			<p class="h3" id="cartPostTotalHolder"></p>
 		  </div>
 		  <div class="modal-footer">
@@ -522,7 +522,7 @@
 			<div class="modal-content">
 
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">Welcome, <span id="userNameHolder"></span></h5>
+					<h5 class="modal-title" id="staticBackdropLabel1">Welcome, <span id="userNameHolder"></span></h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -556,7 +556,7 @@
 					</table>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-danger mr-auto" href="#" onclick="logout()">Logout</button>
+					<button type="button" class="btn btn-danger mr-auto" onclick="logout()">Logout</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-success" onclick="saveAccountData()">Save Changes</button>
 				</div>
@@ -571,7 +571,7 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">Order Complete!</h5>
+					<h5 class="modal-title" id="staticBackdropLabel0">Order Complete!</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
