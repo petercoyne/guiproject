@@ -3,10 +3,15 @@ let observatories = [];
 // Declare empty cart array (PC)
 let cart = [];
 // Initialise coupons array (PC)
+// First item in subarray is coupon code, second is percentage discount, third is active status
 let coupons = [
-	["STELL10", 10],
-	["STELL25", 25]
+	["STELL10", 10, false],
+	["STELL25", 25, false]
 ];
+
+// Initialise cart totals to zero (PC)
+let cartPreTotal = 0;
+let cartPostTotal = 0;
 
 // Call JQuery .ajax function to fetch array from observatories.json (PC)
 // https://api.jquery.com/jquery.ajax/
@@ -23,14 +28,14 @@ $.ajax({
 		buildObservatoryThumbs();
 		// Read and set up shopping cart stuff (PC)
 		initCart();
-		// Place prices from observatories array into the price fields (PC)
-		populatePrices();
+		// If homepage, place prices from observatories array into the price fields (PC)
+		if (document.title == "Stellumina") { populatePrices(); }
 	}
 });
 
-// Generate html for thumbnails (PC)
+// Generate html for observatory thumbnails (PC)
 function buildObservatoryThumbs() {
-	// iterate through observatories (PC)
+	// iterate through observatories array (PC)
 	for (let i = 0; i < observatories.length; i++) {
 		// declare htmlString var and add relevant html (PC)
 		let htmlString = "<a class='obsThumb' href='#obs" + observatories[i].id + "'>";
@@ -136,7 +141,7 @@ function populateCartModal() {
 		$("#cartItem" + i).append("<td>" + obsHours + "</td>");
 		$("#cartItem" + i).append("<td>€" + obsCost + "</td>");
 		// Create a reference to delete handler on this cart item (PC)
-		$("#cartItem" + i).append("<td><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>&times;</button></td>");
+		$("#cartItem" + i).append("<td class='text-right'><button type='button' class='btn btn-danger' onClick='deleteCartItem(" + i + ")'>&times;</button></td>");
 	}
 	// Build row for totals (PC)
 	$("#cartContents").append("<tr id='cartTotal' class='table-active'>");
@@ -145,6 +150,55 @@ function populateCartModal() {
 	$("#cartTotal").append("<td>" + hoursTotal + "</td>");
 	$("#cartTotal").append("<td>€" + costTotal + "</td>");
 	$("#cartTotal").append("<td></td>");
+	// Update global cart total, pre coupons (PC)
+	cartPreTotal = costTotal;
+	updateCoupons();
+}
+
+// Function to add a coupon to the cart (PC)
+function addCoupon() {
+	// Hide the invalid coupon warning (PC)
+	$("#invalidCoupon").hide();
+	// Get coupon code from input box (PC)
+	let theCode = $("#couponInput").val();
+	// Boolean if coupon code is found in array (PC)
+	let foundCoupon = false;
+	// Iterate through coupons array (PC)
+	for (let i = 0; i < coupons.length; i++) {
+		// Check if the code matches the 0th item in array (PC)
+		if (theCode == coupons[i][0]) {
+			// Set 2nd array item to true, indicating coupon is active (PC)
+			coupons[i][2] = true;
+			// Flip our boolean (PC)
+			foundCoupon = true;
+			// Trigger function to update the totals etc (PC)
+			updateCoupons();
+		}
+	}
+	// If we didn't find coupon code in array, warn user (PC)
+	if (foundCoupon == false) {
+		$("#invalidCoupon").show();
+	}
+}
+
+// Function to update coupon display in cart (PC)
+function updateCoupons() {
+	// Clear the coupon list div (PC)
+	$("#couponDetailsHolder").html("");
+	// Set our total to the pre-coupon total (PC)
+	cartPostTotal = cartPreTotal;
+	// Tterate through coupons array (PC)
+	for (let i = 0; i < coupons.length; i++) {
+		// If coupon is active (PC)
+		if (coupons[i][2]) {
+			// Add coupon badge to display div (PC)
+			$("#couponDetailsHolder").append("<p class='badge badge-primary mr-2'>" + coupons[i][0] + ": " + coupons[i][1] + "&percnt; off</p>");
+			// Calculate new total (PC)
+			cartPostTotal *= 1 - ((coupons[i][1]) / 100);
+		}
+	}
+	// Display new post-coupon total below cart (PC)
+	$("#cartPostTotalHolder").html("Total after coupons: &euro;" + cartPostTotal);
 }
 
 // Remove cart item with id of cartID (PC)
@@ -159,9 +213,24 @@ function deleteCartItem(cartID) {
 	populateCartModal();
 }
 
+function emptyCart() {
+	cart = [];
+	// update the cart icon badge in the nav bar (PC)
+	updateCartIcon();
+	// Update the cart table in the modal (PC)
+	populateCartModal();
+}
+
+function checkout() {
+	$("#checkoutDetailsHolder").html(cartPostTotal);
+	emptyCart();
+	$("#cartModal").modal("hide");
+	$("#checkoutModal").modal("show");
+}
+
 // Jquery event listener for "add to cart" button click (PC)
 $(".addToCartBtn").click(function() {
-	// Get the ID of the observatory from the html attribute of the button. Magic! (PC)
+	// Get the ID of the observatory from the html attribute of the button. Magic! :) (PC)
 	let obsID = this.getAttribute("data-obs-id");
 	// Push array to 2d cart array: observatory ID, number of hours requested, cost of item (PC)
 	cart.push([obsID, observatories[obsID].numHours, observatories[obsID].cost]);
@@ -171,6 +240,8 @@ $(".addToCartBtn").click(function() {
 	populateCartModal();
 	// Copy our live array back to storage (PC)
 	cartArrayToStorage();
+	// Update any coupon totals
+	updateCoupons();
 	// Show the "Added to cart" toast, https://getbootstrap.com/docs/4.4/components/toasts/ (PC)
 	$("#addToCartToast").toast("show");
 });

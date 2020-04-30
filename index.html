@@ -61,7 +61,7 @@
 							<a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#">Login</a>
 						</li>
 						<!-- My Account, hidden by default, triggers #accountModal (PC) -->
-						<li class="nav-item hide" id="navAccount">
+						<li class="nav-item hidden" id="navAccount">
 							<a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">My Account</a>
 						</li>
 
@@ -82,7 +82,7 @@
 				<h1 id="mainh1" class="h1 py-3" data-aos="fade-left" data-aos-duration="500">Astro-imaging, <span class="lightblue">democratised.</span></h1>
 				<p class="lead pb-5 text-muted" data-aos="fade-left" data-aos-duration="700">Stellumina makes advanced astrophotography affordable for hobbyists.</p>
 				<a href="#pane2" class="btn btn-light px-5 py-3 mr-3 mb-3" data-aos="fade-left" data-aos-duration="1000">Browse Observatories</a>
-				<a class="btn btn-primary px-5 py-3 mb-3" data-aos="fade-left" data-aos-duration="1200">Learn More</a>
+				<a href="#pane3" class="btn btn-primary px-5 py-3 mb-3" data-aos="fade-left" data-aos-duration="1200">Learn More</a>
 			</div>
 		</div>
 
@@ -117,11 +117,11 @@
 								<img src="images/full-palomar3.jpg" class="img-fluid rounded" alt="Hale Telescope 2">
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+						<a class="carousel-control-prev" href="#carousel0fade" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a>
-						<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+						<a class="carousel-control-next" href="#carousel0fade" role="button" data-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a>
@@ -206,7 +206,7 @@
 					
 				</div>
 				<div class="col-lg-3 obsMapOrder">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28109336.559339!2d-121.93555652476546!3d30.681398100000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x44ccfcdab4738d64!2sHobby%E2%80%93Eberly%20Telescope!5e0!3m2!1sen!2sie!4v1587999059826!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" mb-3></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28109336.559339!2d-121.93555652476546!3d30.681398100000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x44ccfcdab4738d64!2sHobby%E2%80%93Eberly%20Telescope!5e0!3m2!1sen!2sie!4v1587999059826!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
 					<div class="addToCart p-3 mb-3">
 						<h6>Price per hour</h6>
 						<h3>€<span id="price1"></span></h3>
@@ -255,7 +255,7 @@
 					<p>The observatory was administered by the National Optical Astronomy Observatory (NOAO) from the early 1980s until 2019, after which it was overseen by the National Optical-Infrared Astronomy Research Laboratory.</p>
 				</div>
 				<div class="col-lg-3 obsMapOrder">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27730224.014779404!2d-129.52068072476538!3d31.95988990000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa92aad5221dcf9de!2sKitt%20Peak%20National%20Observatory!5e0!3m2!1sen!2sie!4v1587999184605!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" mb-3></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27730224.014779404!2d-129.52068072476538!3d31.95988990000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa92aad5221dcf9de!2sKitt%20Peak%20National%20Observatory!5e0!3m2!1sen!2sie!4v1587999184605!5m2!1sen!2sie" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mb-3"></iframe>
 					<div class="addToCart p-3 mb-3">
 						<h6>Price per hour</h6>
 						<h3>€<span id="price2"></span></h3>
@@ -313,7 +313,7 @@
 					<div class="col-lg-5 col-md-6 row" >
 					<!-- <h1 class="h1">Staff</h1>	-->
 						<!-- NMD - Added descriptions -->
-						<p><b>We here at Stelluminator works hard to allow anyone interested in the vast universe to see their snapshot of their choice.</p>
+						<p><b>We here at Stelluminator works hard to allow anyone interested in the vast universe to see their snapshot of their choice.</b></p>
 
 						<p><br><br><b>We have years of experience as trusted providers of such services, and are more than happy to provide you with any quotations or examples of work expected.</b></p>
 					</div>
@@ -360,7 +360,7 @@
 					</div>
 					<div class="col-lg-5 col-md-6" class="row" >
 					<!-- <h1 class="h1">Staff</h1>	-->
-						<p>We here at stelluminator wish to provide you with the best service possible. </p>
+						<p>We here at stellumina wish to provide you with the best service possible. </p>
 						<p><br></p>
 						<p><br></p><p><br></p><p><br></p><p></p><p><br></p>
 						<p>We have a team of highly trained individuals ready during our working hours to provide you with any information you require.</p>
@@ -401,13 +401,17 @@
 				  <th scope="col"></th>
 				</tr>
 			  </thead>
-			  <!-- populate using main.js:115 (PC) -->
+			  <!-- populate using main.js (PC) -->
 			  <tbody id="cartContents"></tbody>
 			</table>
+			<p id="couponDetailsHolder"></p>
+			<div id="invalidCoupon" class="alert alert-danger text-center hidden" role="alert">Invalid Code</div>
+			<p class="text-right mt-3"><input type="text" id="couponInput" placeholder="Coupon Code"> <a type="button" class="btn btn-success btn-sm text-light" onclick="addCoupon()">Apply Code</a></p>
+			<p class="h3" id="cartPostTotalHolder"></p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-			<button type="button" class="btn btn-primary">Checkout</button>
+			<button type="button" class="btn btn-primary" onclick="checkout()">Checkout</button>
 		  </div>
 		</div>
 	  </div>
@@ -479,7 +483,7 @@
 	<!--NMD Login button main section -->
 	<div id="id01" class="loginstuffmodal loginstuff">
 
-		<!-- https://www.w3schools.com/js/js_validation.asp -->
+		<!-- onsubmit="" - https://www.w3schools.com/js/js_validation.asp (PC) -->
 		<form class="modal-content animate" onsubmit="return login()">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -494,10 +498,10 @@
 				<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
 				<button type="submit">Login</button>
-				<div id="invalidUsername" class="alert alert-danger text-center hide" role="alert">
+				<div id="invalidUsername" class="alert alert-danger text-center hidden" role="alert">
 					Invalid Username!
 				</div>
-				<div id="invalidPassword" class="alert alert-danger text-center hide" role="alert">
+				<div id="invalidPassword" class="alert alert-danger text-center hidden" role="alert">
 					Invalid Password!
 				</div>
 			</div>
@@ -558,6 +562,31 @@
 			</div>
 		</div>
 	</div>
+
+
+	<!-- checkout modal (PC) -->
+
+	<div id="checkoutModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Order Complete!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h2 class="h2">Thank you for your order!</h2>
+					<p>Your order totalling &euro;<span id="checkoutDetailsHolder"></span> has been placed. Your account has been credited with the hours you requested.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
 </body>
 

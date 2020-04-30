@@ -36,7 +36,7 @@ body {
 }
 
 /* -------- Nav Bar -------- */
-	/* Navbar bg colour transition (PC) */
+	/* Navbar bg colour transition, z-index above other items (PC) */
 	nav {
 		z-index: 3;
 		transition: background-color 0.3s;
@@ -90,15 +90,11 @@ body {
 		padding-top: 6px;
 	}
 
-/* Set up background image on first pane (PC) */
+/* Set up background image on first pane, sourced from unsplash.com (PC) */
 #pane1 {
 	background-image: url("../images/bg-home.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-#mainh1 {
-/*	font-weight: 600; */
 }
 
 /* Observatory thumbnails for pane 1 (PC) */
@@ -144,14 +140,14 @@ body {
 	background-color: white;
 }
 
-/* Styling for the "add to cart" section on each observatory (PC) */
+/* Styling for the "add to cart" box on each observatory (PC) */
 .addToCart {
 	background-color: #FCFCFC;
 	border-radius: 16px;
 	border: 1px solid #EEE;
 }
 
-/* curve the maps embed on supported browsers (PC) */
+/* curved corners on the maps embed on supported browsers (PC) */
 iframe {
 	border-radius: 16px;
 }
@@ -163,8 +159,7 @@ iframe {
 	}
 }
 
-/* Hide these divs by default (PC) */
-#invalidPassword, #invalidUsername, #navAccount {
+.hidden {
 	display: none;
 }
 
