@@ -215,6 +215,7 @@ function deleteCartItem(cartID) {
 
 function emptyCart() {
 	cart = [];
+	cartArrayToStorage();
 	// update the cart icon badge in the nav bar (PC)
 	updateCartIcon();
 	// Update the cart table in the modal (PC)
@@ -222,10 +223,14 @@ function emptyCart() {
 }
 
 function checkout() {
-	$("#checkoutDetailsHolder").html(cartPostTotal);
-	emptyCart();
-	$("#cartModal").modal("hide");
-	$("#checkoutModal").modal("show");
+	if (cartPostTotal > 0) {
+		$("#checkoutDetailsHolder").html(cartPostTotal);
+		emptyCart();
+		$("#cartModal").modal("hide");
+		$("#checkoutModal").modal("show");
+	} else {
+		alert("Cart is empty!");
+	}
 }
 
 // Jquery event listener for "add to cart" button click (PC)
