@@ -100,9 +100,11 @@ function updateCartIcon() {
 	if (cart.length == 0) {
 		// remove the badge (PC)
 		document.getElementById("navBadge").innerHTML = "";
+		document.getElementById("navBadgeMobile").innerHTML = "";
 	} else {
 		// else update the badge contents with the number of items in cart (PC)
 		document.getElementById("navBadge").innerHTML = cart.length;
+		document.getElementById("navBadgeMobile").innerHTML = cart.length;
 	}
 }
 
